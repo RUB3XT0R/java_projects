@@ -1,0 +1,130 @@
+/* 
+    Document   : StyleMyApp
+    Created on : 11/01/2011, 11:35:26
+    Author     : Lucas Biason
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*-----------------------------------------------------------------------------
+- Estilo dos blocos
+-----------------------------------------------------------------------------*/
+#container{
+    width: 100%;
+    text-align: left;
+    border-color: #3366CC;
+    margin-top: 10px;
+}
+
+#header {
+    width: 100%;
+    position: relative;
+    background-image: url(../img/icoTelefone.gif);
+    background-repeat: no-repeat;
+    margin-left: 50px;
+}
+#header h1{
+    margin-left: 50px;
+    color:#cc6600;
+    margin-bottom: 0px;
+}
+#header p{
+    margin-top: 0px;
+    margin-left: 50px;
+    color:#000000;
+}
+
+.wrapper {
+    height: 25px;
+    background-color: #666666;
+    background: url(../img/fundoMainNav.png)left bottom;
+    text-align: justify;
+}
+.mainmenu {
+    position:absolute;
+    z-index:100;
+    font-family:Verdana, Geneva, sans-serif;
+    font-weight:normal;
+    font-size:90%;
+    line-height:25px;
+    left:25%;
+    margin-left:-303px;
+    width:606px;
+}
+ul.menu {
+    padding:0;
+    margin:0;
+    list-style:none;
+    width:100px;
+    overflow:hidden;
+    float:left;
+    margin-right:1px;
+}
+ul.menu a {
+    background:#369;
+    text-decoration:none;
+    color:#fff;
+    padding-left:5px;
+    background-color: #ffcc66;
+}
+ul.menu li.list {
+    float:left;
+    width:250px;
+    margin:-32767px -125px 0px 0px;
+    background:url(../img/fundoMainNav.png) left bottom;
+}
+ul.menu li.list a.category {
+    position:relative;
+    z-index:50;
+    display:block;
+    float:left;
+    width:120px;
+    margin-top:32767px;
+    background:transparent;
+}
+ul.menu li.list a.category:hover,
+ul.menu li.list a.category:focus,
+ul.menu li.list a.category:active {
+    margin-right:1px;
+    background-color: #ffcc66;
+    font-size: small;
+}
+ul.submenu {
+    float:left;
+    padding:25px 0px 0px 0px;
+    margin:0;
+    list-style:none;
+    background-color: #ffcc66;
+    margin:-25px 0px 0px 0px;
+}
+ul.submenu li a {
+    float:left;
+    width:120px;
+    background:#ffcc66;
+    clear:left;
+    color:#fff;
+}
+ul.submenu a:hover,
+ul.submenu a:focus,
+ul.submenu a:active {
+    background:url(../img/fundoMainNav.png) left bottom;
+    margin-right:1px;
+    color:#fff;
+    font-size: small;
+}
+
+#content{
+    /*float: left;*/
+    width: 100%;
+    margin: 0 0 0 5px;
+    margin: auto;
+    text-align: center;
+}
+
+#footer{
+    clear: both; /*não fuça*/
+    color: #cccccc;
+    font-size: 90%;
+    height: 20;
+    background-color: #000000;
+}
+

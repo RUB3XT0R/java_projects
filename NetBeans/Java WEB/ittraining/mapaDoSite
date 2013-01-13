@@ -1,0 +1,72 @@
+﻿
+---------------------------------Página Principal : Index.jsp;
+Menus, Destaque, Contato e email.
+Todos eles são páginas a parte que podem ser incluidas via jsp nas outras páginas.
+São elas:
+
+    -> hmenu.jsp - menu horizontal do site (home.jsp,empresa.jsp,depoimentos.jsp,calendario.jsp,localizacao.jsp)
+    -> destaques.jsp - slide show de destaques. para alterar ou retirar basta urtilizar o modelo html.
+    -> menu.jsp - menu vertical dos cursos.
+
+
+---------------------------------Páginas dos Cursos: 
+São convocadas pelas opções do menu vertical. representam o conjunto de Cursos.
+Nelas estão incluidas, usando a tag jsp:include, as páginas nos módulo, cursos menores.
+São elas, com os cursos menores:
+
+    oracle.jsp
+        ->sqlFoundation.jsp
+        ->plsql.jsp
+        ->dba1.jsp
+        ->db2.jsp
+        ->reports.jsp
+        ->forms.jsp
+        ->pacoteOracle.jsp
+	
+    sap.jsp
+	->sapfoundation.jsp
+	->abapfoundationI.jsp
+	->abapfoundationII.jsp
+	->abapexpert.jsp
+
+    java.jsp
+	-> javaOO.jsp
+	-> javaweb.jsp
+	
+    csharp.jsp
+
+    cobol.jsp
+	-> cobolc.jsp
+	->refreshcobol.jsp
+
+    logica.jsp
+    
+    itil.jsp
+	
+    gProjetos.jsp
+
+    scrum.jsp
+
+    seguranca.jsp
+
+---------------------------------Página de Contatos:
+
+Acessada pelo link da imagem do email na pagina de destaques. É uma JanelaModal, o código javaScript está na propria página contato.jsp
+Ao clicar em enviar, é ativado um Servlet chamado enviarEmail com todo o código de envio de email com as bibliotecas do JavaMail.
+Ele utiliza a classe Modelo.Interresado que cria o corpo de e-mail baseado em HTML.
+Após o Envio, o contato é  cadastrado no banco de dados.
+
+---------------------------------Página de currículos:
+
+trabalhe.jsp. do menu horizontal. formulario simples que cadastra mini-curriculo de interresados no banco de dados.
+
+---------------------------------Questionário:
+
+
+
+
+
+
+
+
+                              

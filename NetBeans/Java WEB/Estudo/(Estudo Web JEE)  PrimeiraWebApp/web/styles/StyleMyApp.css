@@ -1,0 +1,126 @@
+/* 
+    Document   : StyleMyApp
+    Created on : 11/01/2011, 11:35:26
+    Author     : Lucas Biason
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*-----------------------------------------------------------------------------
+- Estilo dos blocos
+-----------------------------------------------------------------------------*/
+#container{
+    margin: auto; /*o que faz a página centralizar é o 'auto'*/
+    width: 950px;
+    text-align: left;
+    border-color: #3366CC;
+    background-color:#ffffff;
+}
+
+#header {
+    height: 70px;
+    width: 100%;
+    position: relative;
+    background-image: url(fundoheader.png);
+    background-repeat: repeat;
+}
+#header h1{
+    position:relative;
+    text-align:center;
+    color:#cccccc;
+    font-size: large;
+    font-family: cursive;
+    font-weight: normal;
+}
+
+#mainnav {
+    height: 50px;
+    color: #FFFFFF;
+    background-color: #759CAB;
+    background-image: url(fundomenunormal.png);
+}
+#mainnav a{
+    padding: 1 5px;
+    color:#FFFFFF;
+    background-image: url(fundomenunormalH.png);
+    background-repeat: repeat;
+}
+#mainnav a:hover{
+    padding: 5 20px;
+    color:#FFFFFF;
+    background-image: url(fundomenunormal.png);
+    background-repeat: repeat;
+}
+#mainnav img{
+    width:30; 
+    heigth:30;
+}
+#mainnav img:hover{
+    width:40;
+    heigth:40;
+}
+
+#menu{
+    float:left;
+    width: 150px;
+    margin: auto;
+    background-color: #592826;
+}
+#menu h3{
+    width: 150px;
+    position: relative;
+    height: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0 0 0 0;
+    background-image: url(fundomenuheader.png);
+    background-repeat: repeat;
+}
+#menu ul{
+    margin: 0 0 0 0;
+    padding: 0;
+}
+#menu ul li{
+    list-style-type: none;
+    text-align: center;
+    background-image: url(fundomenunormal.png);
+    background-repeat: repeat;
+}
+#menu ul li:hover{
+    list-style-type: none;
+    text-align: center;
+    background-image: url(fundomenunormalH.png);
+    background-repeat: repeat;
+}
+#menu a{
+    color:#FFFFFF;
+    text-decoration: none;
+    text-align: center;
+}
+#menu a:hover{
+    color:#000000;
+    text-decoration: none;
+    text-align: center;
+    font-size: medium;
+}
+
+#content{
+    float: left;
+    width: 800px;
+    margin: 0 0 0 5px;
+    background-color:#ffffff;
+    margin: auto;
+}
+#content p { 
+    line-height: 165%;
+}
+
+#footer{
+    clear: both; /*não fuça*/
+    color: #C0C0C0;
+    text-align: right;
+    font-size: 90%;
+    height: 20;
+    background-image: url(fundomenunormal.png);
+    background-repeat: repeat;
+}
+

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+   <f:view contentType="text/html">
+      <h:head>
+         <title>Facelet Title</title>
+         <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+      </h:head>
+      <h:body>
+         <h:form>
+            <p:fieldset legend="Meu Cadastro" toggleable="true">
+
+               <p:growl id="avisos" showDetail="true" life="3000" />
+               <p:messages id="mensagens" showDetail="true" />
+
+               <p:commandButton value="Painéis" action="testepainels.jsf" ajax="false"/>
+               <p:commandButton value="Mock" action="mockos" ajax="false"/>
+               <p:commandButton value="Cadastro" action="novoCadastro.jsf" ajax="false"/>
+               <p:commandButton value="Dock" action="testedock.jsf" ajax="false"/>
+               <p:commandButton value="Agenda" action="agenda.jsf" ajax="false"/>
+
+               <p:commandButton value="Testar" actionListener="#{tableBean.testar}"
+                                update="avisos,mensagens"/>
+        
+            </p:fieldset>
+         <p:fieldset legend="Menus" toggleable="true">
+               <p:toolbar>
+                  <p:toolbarGroup align="left">
+                     <p:commandButton value="Buscar"/>
+                     <p:divider/>
+                     <p:commandButton value="Novo"/>
+                     <p:commandButton value="Salvar"/>
+                     <p:commandButton value="Excluir"/>
+                  </p:toolbarGroup>
+                  <p:toolbarGroup align="right">
+                     <p:commandButton value="Sair"/>
+                  </p:toolbarGroup>
+               </p:toolbar>
+         </p:fieldset>
+         </h:form>
+      </h:body>
+   </f:view>
+</html>
+

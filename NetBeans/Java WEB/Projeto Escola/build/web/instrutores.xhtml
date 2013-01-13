@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+            <h:commandButton action="index" image="img/prev.gif"/> 
+            <h:commandButton action="novo" actionListener="#{instrutorBean.novo}" image="img/add.png"/>
+
+            <p:dataTable value="#{instrutorBean.instrutores}" var="item" 
+                         paginator="true" rows="8" selection="#{instrutorBean.instrutor}" 
+                         selectionMode="single"> 
+               <p:column style="width:16px"><p:rowToggler/></p:column> 
+               <p:column headerText="Id" filterBy="#{item.id}">
+                  <h:outputText value="#{item.id}"/>
+               </p:column>
+               <p:column headerText="Nome" filterBy="#{item.nome}">
+                  <h:outputText value="#{item.nome}"/>
+               </p:column>
+               <p:column headerText="CPF" filterBy="#{item.cpf}">
+                  <h:outputText value="#{item.cpf}"/>
+               </p:column>
+               <p:column headerText="Email" filterBy="#{item.email}">
+                  <h:outputText value="#{item.email}"/>
+               </p:column>
+               <p:column headerText="Telefone" filterBy="#{item.telefone}">
+                  <h:outputText value="#{item.telefone}"/>
+               </p:column>
+               <p:column headerText="Options" style="width: 50px;">
+                  <h:commandButton action="edit" 
+                                   actionListener="#{instrutorBean.selecionar}" 
+                                   image="img/up.gif"/>
+                  <h:commandButton action="del" 
+                                   actionListener="#{instrutorBean.selecionar}" 
+                                   image="img/del.png"/>
+               </p:column>  
+               <p:rowExpansion>  
+                  <h:panelGrid id="display" columns="2" cellpadding="4">  
+
+                     <f:facet name="header"><h:outputText value="#{item.nome}"/></f:facet>
+                     <b>Email (2):</b>
+                     <h:outputText value="#{item.email2}"/> 
+                     <b>Telefone (2) :</b>
+                     <h:outputText value="#{item.telefone2}" /> 
+                     <b>RG:</b>
+                     <h:outputText value="#{item.rg}" />
+                     <b>Carro Modelo:</b>
+                     <h:outputText value="#{item.carroModelo}" />
+                     <b>Carro Placa:</b>
+                     <h:outputText value="#{item.carroPlaca}" />
+                     <b>Carro Cor:</b>
+                     <h:outputText value="#{item.carroCor}" />
+                     <b>Carro Marca:</b>
+                     <h:outputText value="#{item.carroMarca}" />
+                     <b>Cursos</b>
+                     <p:dataTable value="#{item.cursoinstrutorList}" 
+                                  var="itemI" scrollable="true" height="100">
+                        <p:column headerText="Nome">
+                           <h:outputText value="#{itemI.chave.curso.nome}"/>
+                        </p:column>
+                        <p:column headerText="Periodo">
+                           <h:outputText value="#{itemI.periodo}"/>
+                        </p:column>   
+                        <p:column headerText="Unidade(s):">
+                        <h:panelGrid columns="2" style="border-color: white">
+                           <h:outputText value="ABC" rendered="#{itemI.unidadeAbc}" id="abc"/>
+                           <h:outputText value="UP" rendered="#{itemI.unidadeUP}" id="up"/>
+                         </h:panelGrid>
+                        </p:column>
+                     </p:dataTable>
+                  </h:panelGrid>  
+               </p:rowExpansion> 
+            </p:dataTable>
+         </div>
+
+
+
+      </h:form>
+   </h:body>
+</html>
+

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+   <h:head>
+      <title>Pizzaria ITTraining</title>
+   </h:head>
+   <h:body>
+      <img src="LogoItt.jpg"/><br/>
+      <h1>Projeto Pizza</h1>
+      <hr/>     
+      <h:form>
+         <h:commandButton action="index" value="Voltar"/>
+         | <h:commandButton action="novoCliente" 
+                            actionListener="#{clienteBean.novo}" 
+                            value="Novo"/>
+         <hr/>
+         <h3>Lista de Clientes Cadastrados</h3>
+         <h:dataTable value="#{clienteBean.clientes}" var="c"  border="1" 
+                      cellspacing="0">
+            <h:column>
+               <f:facet name="header"><h:outputText value="Codigo"/></f:facet>
+               <h:outputText value="#{c.codigo}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header"><h:outputText value="Nome"/></f:facet>
+               <h:outputText value="#{c.nome}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header"><h:outputText value="Telefone"/></f:facet>
+               <h:outputText value="#{c.telefone}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header"><h:outputText value="Endereco"/></f:facet>
+               <h:outputText value="#{c.endereco}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header"><h:outputText value="Ações"/></f:facet>
+               <h:commandButton action="alterarCliente" 
+                                actionListener="#{clienteBean.selecionar}" 
+                                value="Alterar"/>
+               <h:commandButton action="removerCliente" 
+                                actionListener="#{clienteBean.selecionar}" 
+                                value="Remover"/>
+            </h:column>
+         </h:dataTable>
+      </h:form>
+      <br/><hr/>ITTraining - Curso Java WEB
+   </h:body>
+</html>
+

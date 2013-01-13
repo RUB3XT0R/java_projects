@@ -1,0 +1,14 @@
+package classes_de_estudo;
+
+
+
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        new JFramePrincipal().setVisible( true );
+    }
+
+}

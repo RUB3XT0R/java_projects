@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Cadastrando novo Produto</title>
+    </h:head>
+    <h:body>
+        <h:form>  
+            
+        <h:panelGrid columns="1">
+        <p:fieldset legend="Dados Cadastrais">
+            <h:panelGrid columns="2">
+                
+                <h:outputText value="Nome"/>
+                <h:inputText value="#{produtoController.produto.nome}"/>
+                
+                <h:outputText value="Descrição"/>
+                <h:inputText value="#{produtoController.produto.descricao}"/>
+                
+                <h:outputText value="Unidade:"/>
+                <h:inputText value="#{produtoController.produto.unidade_compra}"/>
+                
+                <h:outputText value="Quantidade prevista para o mês"/>
+                <h:inputText value="#{produtoController.produto.qtde_prevista_mes}"/>
+                
+                <h:outputText value="Preço previsto"/>
+                <h:inputText value="#{produtoController.produto.preco_maximo_anterior}"/>
+                 
+                <h:commandButton action="#{produtoController.inserir}" value="Inserir"/>
+                <h:commandButton action="produtos" immediate="True" value="Cancelar"/>
+            </h:panelGrid>  
+        </p:fieldset>
+        </h:panelGrid>
+            
+        </h:form>
+    </h:body>
+</html>
+

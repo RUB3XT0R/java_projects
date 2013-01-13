@@ -1,0 +1,266 @@
+-interessados:---
+<!-- onRowSelectUpdate="display" onRowSelectComplete="curDialog.show()" --> 
+
+         <p:dialog header="Detalhes do Interessado" widgetVar="curDialog" resizable="false"  >  
+            <h:panelGrid id="display" columns="2" cellpadding="4">  
+               <f:facet name="header">
+                  <h:outputText value="#{interessadoBean.interessado.nome}"/>
+               </f:facet>
+               <h:outputText value="Tel. Comercial:"/>
+               <h:outputText value="#{interessadoBean.interessado.telcomercial}"/>
+               <h:outputText value="Tel. Residencial:"/>
+               <h:outputText value="#{interessadoBean.interessado.telresidencial}"/> 
+               <h:outputText value="Celular:"/>
+               <h:outputText value="#{interessadoBean.interessado.celular}"/> 
+               <h:outputText value="Email:"/>
+               <h:outputText value="#{interessadoBean.interessado.email}" /> 
+               <h:outputText value="Unidades:"/>
+               <input type="checkbox" id="abc" name="abc" value="true" />ABC
+               |<input type="checkbox" id="up" name="up" value="true" />UP
+               <h:outputText value="Periodo:"/>
+               <h:outputText value="#{interessadoBean.interessado.periodo}" />
+               <h:outputText value="Cursos:"/>
+               <p:dataList value="#{interessadoBean.interessado.cursos}" var="curso" itemType="disc">  
+                  #{curso.nome}  
+               </p:dataList>  
+            </h:panelGrid>  
+         </p:dialog> 
+-----------------------------------------------------------------------------------------------------
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+            <h:commandButton action="index" image="img/prev.gif"/> 
+            <h:commandButton action="novo" actionListener="#{interessadoBean.novo}" image="img/add.png"/>
+
+            <p:accordionPanel>  
+               <p:tab title="Todos os Interessados">  
+                  <p:dataTable id="tbl" value="#{interessadoBean.interessados}" var="item" paginator="true" 
+                               rows="10" selection="#{interessadoBean.interessado}" selectionMode="single">
+                     <p:column style="width:16px"><p:rowToggler/></p:column>  
+                     <p:column headerText="Id" filterBy="#{item.id}">
+                        <h:outputText value="#{item.id}"/>
+                     </p:column>
+                     <p:column headerText="Nome" filterBy="#{item.nome}">
+                        <h:outputText value="#{item.nome}"/>
+                     </p:column>
+                     <p:column headerText="Email" filterBy="#{item.email}">
+                        <h:outputText value="#{item.email}"/>
+                     </p:column>
+                     <p:column headerText="Celular" filterBy="#{item.celular}">
+                        <h:outputText value="#{item.celular}"/>
+                     </p:column>
+                     <p:column headerText="Tel. Comercial" filterBy="#{item.telcomercial}">
+                        <h:outputText value="#{item.telcomercial}"/>
+                     </p:column>
+                     <p:column headerText="Tel. Residencial" filterBy="#{item.telresidencial}">
+                        <h:outputText value="#{item.telresidencial}"/>
+                     </p:column>
+                     <p:column headerText="Options" style="width: 50px;">
+                        <h:commandButton action="edit" actionListener="#{interessadoBean.selecionar}" 
+                                         image="img/up.gif"/>
+                        <h:commandButton action="del" actionListener="#{interessadoBean.selecionar}" 
+                                         image="img/del.png"/>
+                     </p:column>  
+                     <p:rowExpansion>  
+                        <h:panelGrid id="display" columns="2" cellpadding="4">  
+                           <f:facet name="header"><h:outputText value="#{item.nome}"/></f:facet>
+                           <h:outputText value="Periodo:"/>
+                           <h:outputText value="#{item.periodo}" />
+                           <h:outputText value="Cursos:"/>
+                           <p:dataList value="#{item.cursos}" var="curso">#{curso.nome}</p:dataList>  
+                        </h:panelGrid>    
+                     </p:rowExpansion> 
+                  </p:dataTable>
+                  <p:panel style="width:65px"> 
+                     <h:commandLink>  
+                        <p:graphicImage value="images/csv.png" />  
+                        <p:dataExporter type="csv" target="tbl" fileName="interessados" />  
+                     </h:commandLink>  
+                  </p:panel> 
+               </p:tab>  
+               <p:tab title="Unidade UP">  
+                  <p:dataTable id="tblUP" value="#{interessadoBean.interessadosUP}" var="item" paginator="true" 
+                               rows="10" selection="#{interessadoBean.interessado}" selectionMode="single">
+                     <p:column style="width:16px"><p:rowToggler/></p:column>  
+                     <p:column headerText="Id" filterBy="#{item.id}">
+                        <h:outputText value="#{item.id}"/>
+                     </p:column>
+                     <p:column headerText="Nome" filterBy="#{item.nome}">
+                        <h:outputText value="#{item.nome}"/>
+                     </p:column>
+                     <p:column headerText="Email" filterBy="#{item.email}">
+                        <h:outputText value="#{item.email}"/>
+                     </p:column>
+                     <p:column headerText="Celular" filterBy="#{item.celular}">
+                        <h:outputText value="#{item.celular}"/>
+                     </p:column>
+                     <p:column headerText="Tel. Comercial" filterBy="#{item.telcomercial}">
+                        <h:outputText value="#{item.telcomercial}"/>
+                     </p:column>
+                     <p:column headerText="Tel. Residencial" filterBy="#{item.telresidencial}">
+                        <h:outputText value="#{item.telresidencial}"/>
+                     </p:column>
+                     <p:column headerText="Options" style="width: 50px;">
+                        <h:commandButton action="edit" actionListener="#{interessadoBean.selecionarUP}" 
+                                         image="img/up.gif"/>
+                        <h:commandButton action="del" actionListener="#{interessadoBean.selecionarUP}" 
+                                         image="img/del.png"/>
+                     </p:column>  
+                     <p:rowExpansion>  
+                        <h:panelGrid id="display" columns="2" cellpadding="4">  
+                           <f:facet name="header"><h:outputText value="#{item.nome}"/></f:facet>
+                           <h:outputText value="Periodo:"/>
+                           <h:outputText value="#{item.periodo}" />
+                           <h:outputText value="Cursos:"/>
+                           <p:dataList value="#{item.cursos}" var="curso">#{curso.nome}</p:dataList>  
+                        </h:panelGrid>    
+                     </p:rowExpansion> 
+                  </p:dataTable>
+                  <p:panel style="width:65px"> 
+                     <h:commandLink>  
+                        <p:graphicImage value="images/csv.png" />  
+                        <p:dataExporter type="csv" target="tblUP" fileName="interessados" />  
+                     </h:commandLink>  
+                  </p:panel> 
+               </p:tab>  
+               <p:tab title="Unidade ABC">  
+                  <p:dataTable id="tblABC" value="#{interessadoBean.interessadosABC}" var="item" paginator="true" 
+                               rows="10" selection="#{interessadoBean.interessado}" selectionMode="single">
+                     <p:column style="width:16px"><p:rowToggler/></p:column>  
+                     <p:column headerText="Id" filterBy="#{item.id}">
+                        <h:outputText value="#{item.id}"/>
+                     </p:column>
+                     <p:column headerText="Nome" filterBy="#{item.nome}">
+                        <h:outputText value="#{item.nome}"/>
+                     </p:column>
+                     <p:column headerText="Email" filterBy="#{item.email}">
+                        <h:outputText value="#{item.email}"/>
+                     </p:column>
+                     <p:column headerText="Celular" filterBy="#{item.celular}">
+                        <h:outputText value="#{item.celular}"/>
+                     </p:column>
+                     <p:column headerText="Tel. Comercial" filterBy="#{item.telcomercial}">
+                        <h:outputText value="#{item.telcomercial}"/>
+                     </p:column>
+                     <p:column headerText="Tel. Residencial" filterBy="#{item.telresidencial}">
+                        <h:outputText value="#{item.telresidencial}"/>
+                     </p:column>
+                     <p:column headerText="Options" style="width: 50px;">
+                        <h:commandButton action="edit" actionListener="#{interessadoBean.selecionarABC}" 
+                                         image="img/up.gif"/>
+                        <h:commandButton action="del" actionListener="#{interessadoBean.selecionarABC}" 
+                                         image="img/del.png"/>
+                     </p:column>  
+                     <p:rowExpansion>  
+                        <h:panelGrid id="display" columns="2" cellpadding="4">  
+                           <f:facet name="header"><h:outputText value="#{item.nome}"/></f:facet>
+                           <h:outputText value="Periodo:"/>
+                           <h:outputText value="#{item.periodo}" />
+                           <h:outputText value="Cursos:"/>
+                           <p:dataList value="#{item.cursos}" var="curso">#{curso.nome}</p:dataList>  
+                        </h:panelGrid>    
+                     </p:rowExpansion> 
+                  </p:dataTable>
+                  <p:panel style="width:65px"> 
+                     <h:commandLink>  
+                        <p:graphicImage value="images/csv.png" />  
+                        <p:dataExporter type="csv" target="tblABC" fileName="interessados" />  
+                     </h:commandLink>  
+                  </p:panel> 
+               </p:tab>  
+            </p:accordionPanel>  
+
+
+         </div>
+      </h:form>
+   </h:body>
+</html>
+
+--------------------------------------------------------------------------------------------------------
+<p:dialog header="Detalhes do Curso" widgetVar="curDialog" resizable="false"  
+                   width="550" >  
+            <h:panelGrid id="display" columns="4" cellpadding="4">  
+               <f:facet name="header"><h:outputText value="#{cursoBean.curso.nome}"/></f:facet>
+               <b>Categoria:</b><h:outputText value="#{cursoBean.curso.categoria}"/>
+               <b>carga Horária:</b><h:outputText value="#{cursoBean.curso.cargaHora}" /> 
+               <b>Investimento: R$</b><h:outputText value="#{cursoBean.curso.investimento}" /> 
+               <b>A vista: R$</b><h:outputText value="#{cursoBean.curso.avista}" />
+               <b>Instrutores</b>
+               <b>Interessados</b>
+               <p:dataList value="#{cursoBean.curso.interessados}" var="inte" itemType="disc">  
+                              #{inte.nome}, #{inte.email}  
+              </p:dataList>  
+            </h:panelGrid>  
+         </p:dialog> 
+-----------------------------------------------------------------------------------------------------------
+<p:dialog header="Detalhes do Cliente" widgetVar="cliDialog" resizable="false"  
+                   width="550" >  
+            <h:panelGrid id="display" columns="4" cellpadding="4">  
+               <f:facet name="header"><h:outputText value="#{clienteBean.cliente.nome}"/></f:facet>
+               <b>CPF/CNPJ:</b><h:outputText value="#{clienteBean.cliente.cpfCnpj}" /> 
+               <b>RG:</b><h:outputText value="#{clienteBean.cliente.rg}" /> 
+               <b>Tipo:</b><h:outputText value="#{clienteBean.cliente.tipoCliente}" /> 
+               <b>Data Cadastro:</b>
+               <h:outputText value="#{clienteBean.cliente.dataCadastro}">
+                  <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+               </h:outputText>
+               <b>UF:</b><h:outputText value="#{clienteBean.cliente.uf}" />
+               <b>Endereço:</b><h:outputText value="#{clienteBean.cliente.endereco}" />
+               <b>Bairro:</b><h:outputText value="#{clienteBean.cliente.bairro}" /> 
+               <b>Cidade:</b><h:outputText value="#{clienteBean.cliente.cidade}" /> 
+               <b>CEP:</b><h:outputText value="#{clienteBean.cliente.cep}" />   
+               <b>Tel. Residencial:</b><h:outputText value="#{clienteBean.cliente.telefoneResidencial}" /> 
+               <b>Tel. Celular:</b><h:outputText value="#{clienteBean.cliente.telefoneCelular}" /> 
+               <b>Tel. Comercial:</b><h:outputText value="#{clienteBean.cliente.telefoneComercial}" /> 
+               <b>E-mail 1:</b><h:outputText value="#{clienteBean.cliente.email}" /> 
+               <b>E-mail 2:</b><h:outputText value="#{clienteBean.cliente.email2}" />  
+            </h:panelGrid>  
+         </p:dialog> 
+----------------------------------------------------------------------------------------------------------
+<p:dialog header="Detalhes do Instrutor" widgetVar="curDialog" resizable="false"  
+                   width="550" >  
+            <h:panelGrid id="display" columns="4" cellpadding="4">  
+               <f:facet name="header">
+                  <h:outputText value="#{instrutorBean.instrutor.nome}"/>
+               </f:facet>
+               <b>CPF:</b>
+               <h:outputText value="#{instrutorBean.instrutor.cpf}"/>
+               <b>Email:</b>
+               <h:outputText value="#{instrutorBean.instrutor.email}"/> 
+               <b>Email (2):</b>
+               <h:outputText value="#{instrutorBean.instrutor.email2}"/> 
+               <b>Telefone:</b>
+               <h:outputText value="#{instrutorBean.instrutor.telefone}" /> 
+               <b>Telefone (2) :</b>
+               <h:outputText value="#{instrutorBean.instrutor.telefone2}" /> 
+               <b>RG:</b>
+               <h:outputText value="#{instrutorBean.instrutor.rg}" />
+               <p:separator/><p:separator/><p:separator/><p:separator/>
+               <b>Carro Modelo:</b>
+               <h:outputText value="#{instrutorBean.instrutor.carroModelo}" />
+               <b>Carro Placa:</b>
+               <h:outputText value="#{instrutorBean.instrutor.carroPlaca}" />
+               <b>Carro Cor:</b>
+               <h:outputText value="#{instrutorBean.instrutor.carroCor}" />
+               <b>Carro Marca:</b>
+               <h:outputText value="#{instrutorBean.instrutor.carroMarca}" />
+               <b>Cursos</b>
+            </h:panelGrid>  
+         </p:dialog> 
+----------------------------------------------------------------------------------------------------
+
+
+

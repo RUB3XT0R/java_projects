@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 1 elements(s) to &apos;Listas/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;Vetores&apos;&#x0D;&#x0A;- Destination element: &apos;Listas/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;Array.java&apos;" description="Copy compilation unit" destination="=Listas/src&lt;" element1="/src&lt;{Array.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1272027816259" units="1" version="1.0"/>
+</session>

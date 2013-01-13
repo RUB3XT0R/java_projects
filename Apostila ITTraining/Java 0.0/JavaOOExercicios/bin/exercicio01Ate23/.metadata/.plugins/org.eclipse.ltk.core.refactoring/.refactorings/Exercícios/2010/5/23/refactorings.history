@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Estruturas.Arvore3&apos; to &apos;Arv3&apos;&#x0D;&#x0A;- Original project: &apos;Exercícios&apos;&#x0D;&#x0A;- Original element: &apos;Estruturas.Arvore3&apos;&#x0D;&#x0A;- Renamed element: &apos;Estruturas.Arv3&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Arvore3&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Estruturas{Arvore3.java[Arvore3" matchStrategy="1" name="Arv3" qualified="false" references="true" similarDeclarations="true" stamp="1275305956759" textual="true" version="1.0"/>
+</session>

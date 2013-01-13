@@ -1,0 +1,333 @@
+@charset "utf-8";
+/* CSS Document */
+img{ padding: 0px;
+margin: 0px;
+border: none;}
+body {
+    background-repeat: repeat-x;
+    font-family: cursive;
+}
+#corpo{
+    position:absolute;
+    min-width:900px;
+    color: #666;
+    text-align: center;
+    top: 30px;
+}
+
+/* CSS Topo */
+    #topo{
+        top: 5px;
+        position: fixed;
+        width:500px;
+        background-color: #333333;
+        color: #ffffff;
+        left: 20px;
+    }
+    #topoUser{
+        top: 35px;
+        position: fixed;
+        width:350px;
+        background-color: #666;
+        color:#ffffff;
+        left: 20px;
+    }
+    #topoPermissao{
+        top: 59px;
+        position: fixed;
+        width:200px;
+        background-color: #999999;
+        color:#000000;
+        left: 20px;
+    }
+    #logotopo{
+        top:0px;
+        left: 900px;
+        position: absolute;
+
+    }
+
+/* CSS Menu Vertical */
+ul#sliding-navigation  { 
+    position: absolute;
+    font-size: .79em; 
+    margin:0px;  
+    padding-left:10px;
+    padding-top:100px;
+    z-index: 1;
+    list-style: none;
+    
+}  
+ul#sliding-navigation li.sliding-element h3,  
+ul#sliding-navigation li.sliding-element a  {  
+    display: block;  
+    width: 190px;  
+    padding: 1px 15px;  
+    margin: 0;  
+    margin-bottom: 5px;  
+background-position:0 0;
+}    
+ul#sliding-navigation li.sliding-element h3  { 
+    color: #CCC;  
+    background: #333;  
+    border: 1px solid #1a1a1a;  
+    font-weight: bolder;  
+    font-size: small;
+ text-align: center;
+}  
+ul#sliding-navigation li.sliding-element a  {  
+    color: #fff;  
+    background: #222;  
+    border: 1px solid #1a1a1a;  
+    text-decoration: none;   
+    font-weight: bolder; 
+    
+ text-align: left;
+}  
+ul#sliding-navigation li.sliding-element a:hover { color: #ffcc33; }  
+
+.tableform{
+    padding-bottom:0px;
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:0px;
+}
+
+
+/* CSS Tabelas */
+.tableDatas{
+    position: absolute;
+    float: left;
+    width: 740px;
+    height: 510px;
+    left: 530px;
+    top: 110px;
+    z-index: 1;
+    overflow:auto;
+    font-size: small;
+}
+.tableDatas table{
+    background-color:gray;
+    padding:2px; 
+    margin:2px; 
+    border:0px;
+}
+.tableDatas table th{
+    color:white;
+}
+.tableDatas table td{
+    background-color:white;
+}
+.tableDatas table caption{
+    color:gray;
+    font-size: larger;
+}
+.newDatas{
+    position: absolute;
+    float: right;
+    left: 210px;
+    top: 100px;
+    max-width: 280px;
+    z-index: 0;
+}
+.newDatas  fieldset{
+    max-width: 280px;
+}
+.newDatas table{
+    padding:2px; 
+    margin:2px; 
+    border:0px;
+    max-width: 280px;
+}
+.newDatas table td{
+    color:gray;
+    max-width: 260px;
+}
+.newDatas table caption{
+    color:gray;
+    font-size: larger;
+}
+.formSubmit input{
+    font-size: medium;
+    border-right-color: #999999;
+    border-left-color: #999999;
+    border-bottom-color: #999999;
+    border-top-color: #999999;
+    border-top-style: none;
+    border-left-style: none;
+    vertical-align: middle;
+    border-right-style: none;
+}
+/* CSS tabela Clientes */
+.menu{
+    position:absolute;
+    top:80px;
+    left:280px;
+    height: 28px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+.tableDatasCli{
+    position: absolute;
+    float: left;
+    height: 470px;
+    left: 280px;
+    top: 130px;
+    z-index: 1;
+    overflow:auto;
+    font-size: small;
+}
+.tableDatasCli table{
+    background-color:gray;
+    padding:2px; 
+    margin:2px; 
+    border:0px;
+}
+.tableDatasCli table th{
+    color:white;
+}
+.tableDatasCli table td{
+    background-color:white;
+}
+.tableDatasCli table caption{
+    color:gray;
+    font-size: larger;
+}
+
+.newDatasCli{
+    position: absolute;
+    float: right;
+    left: 430px;
+    top: 130px;
+    max-width: 280px;
+    z-index: 0;
+}
+.newDatasCli  fieldset{
+    max-width: 280px;
+}
+.newDatasCli table{
+    padding:2px; 
+    margin:2px; 
+    border:0px;
+    max-width: 280px;
+}
+.newDatasCli table td{
+    color:gray;
+    max-width: 260px;
+}
+.newDatasCli table caption{
+    color:gray;
+    font-size: larger;
+}
+
+
+
+/* CSS tabela Cursos */
+.tableDatasCur{
+    position: absolute;
+    float: left;
+    height: 470px;
+    left: 280px;
+    top: 130px;
+    z-index: 1;
+    overflow:auto;
+    font-size: small;
+}
+.tableDatasCur table{
+    background-color:gray;
+    padding:2px; 
+    margin:2px; 
+    border:0px;
+}
+.tableDatasCur table th{
+    color:white;
+}
+.tableDatasCur table td{
+    background-color:white;
+}
+.tableDatasCur table caption{
+    color:gray;
+    font-size: larger;
+}
+
+.newDatasCur{
+    position: absolute;
+    float: right;
+    left: 430px;
+    top: 130px;
+    max-width: 280px;
+    z-index: 0;
+}
+.newDatasCur  fieldset{
+    max-width: 280px;
+}
+.newDatasCur table{
+    padding:2px; 
+    margin:2px; 
+    border:0px;
+    max-width: 280px;
+}
+.newDatasCur table td{
+    color:gray;
+    max-width: 260px;
+}
+.newDatasCur table caption{
+    color:gray;
+    font-size: larger;
+}
+
+
+
+/* View de Instrutores */
+.viewInst{
+    position: absolute;
+    float: right;
+    left: 260px;
+    top: 130px;
+    max-width: 280px;
+    z-index: 0;
+}
+.viewInst  fieldset{
+    max-width: 280px;
+}
+.viewInst table{
+    padding:2px; 
+    margin:2px; 
+    border:0px;
+    max-width: 280px;
+}
+.viewInst table td{
+    color:gray;
+    max-width: 260px;
+}
+.viewInst table caption{
+    color:gray;
+    font-size: larger;
+}
+
+.viewInstCur{
+    position: absolute;
+    float: right;
+    left: 770px;
+    top: 130px;
+    max-width: 280px;
+    z-index: 0;
+}
+.viewInstCur  fieldset{
+    max-width: 280px;
+}
+.viewInstCur table{
+    padding:2px; 
+    margin:2px; 
+    border:0px;
+    max-width: 280px;
+}
+.viewInstCur table td{
+    color:gray;
+    max-width: 260px;
+}
+.viewInstCur table caption{
+    color:gray;
+    font-size: larger;
+}

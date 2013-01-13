@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+            <table  bgcolor="white">
+               <caption>Cadastro de Novo Curso</caption>
+               <tr>
+                  <td>Nome:</td>
+                  <td><p:inputText id="nome" value="#{cursoBean.curso.nome}" 
+                                   title="Nome" /></td>
+                  <td>Carga Horária:</td>
+                  <td><p:inputText id="cargaH" value="#{cursoBean.curso.cargaHora}" 
+                                   title="cargaH"/></td>
+               </tr>
+               <tr>
+                  <td>Investimento:</td>
+                  <td><p:inputText id="investimento" value="#{cursoBean.curso.investimento}" 
+                                   title="investimento" /></td>
+                  <td>A vista:</td>
+                  <td><p:inputText id="avista" value="#{cursoBean.curso.avista}" 
+                                   title="avista" /></td>
+               </tr>
+               <tr>
+                  <td>Categoria:</td>
+                  <td>
+                     <h:selectOneMenu id="categoria" value="#{cursoBean.curso.categoria}">
+                        <f:selectItem itemLabel="Oracle" itemValue="Oracle"/>
+                        <f:selectItem itemValue="SAP"/>
+                        <f:selectItem itemValue="Desenvolvimento de Sistemas"/>
+                        <f:selectItem itemValue="Gestão"/>
+                     </h:selectOneMenu></td>
+               </tr>
+               <tr>
+                  <td colspan="4"><p:separator/></td>
+               </tr>
+               <tr>
+                  <td>Nome da Proposta:</td>
+                  <td><p:inputText id="proposta" value="#{cursoBean.curso.proposta}" 
+                                   title="proposta" /></td>
+               </tr>
+               <tr>
+                  <td>Nome do Arquivo<br/>de Propaganda:</td>
+                  <td><p:inputText id="endereco" value="#{cursoBean.curso.dados}" 
+                                   title="Endereco" /></td>
+               </tr>
+
+               <tr>
+                  <td colspan="4">
+                     <p align="center">
+                        Cadastrar <h:commandButton 
+                           action="#{cursoBean.inserir}" image="img/next.png"/>
+                     </p>
+                  </td>                        
+               </tr>
+            </table>
+         </div>
+      </h:form>
+
+   </h:body>
+</html>
+

@@ -1,0 +1,12 @@
+SMAP
+index_jsp.java
+JSP
+*S JSP
+*F
++ 0 index.jsp
+testes/AnimatedAndSlides/index.jsp
+*L
+1,8:45
+9,2:53,3
+11,2:59
+*E

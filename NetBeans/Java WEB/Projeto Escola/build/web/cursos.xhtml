@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+            <h:commandButton action="index" image="img/prev.gif"/> 
+            <h:commandButton action="novo" actionListener="#{cursoBean.novo}" image="img/add.png"/>
+
+            <p:dataTable value="#{cursoBean.cursos}" var="item" paginator="true" rows="8"  
+                         selection="#{cursoBean.curso}" selectionMode="single"> 
+               <p:column style="width:16px"><p:rowToggler/></p:column> 
+               <p:column headerText="Id" filterBy="#{item.id}">
+                  <h:outputText value="#{item.id}"/>
+               </p:column>
+               <p:column headerText="Nome" filterBy="#{item.nome}">
+                  <h:outputText value="#{item.nome}"/>
+               </p:column>
+               <p:column headerText="Carga Horária" filterBy="#{item.cargaHora}">
+                  <h:outputText value="#{item.cargaHora}"/>
+               </p:column>
+               <p:column headerText="Investimento" filterBy="#{item.investimento}">
+                  R$ <h:outputText value="#{item.investimento}"/>
+               </p:column>
+               <p:column headerText="A vista" filterBy="#{item.avista}">
+                  R$ <h:outputText value="#{item.avista}"/>
+               </p:column>
+               <p:column headerText="Categoria" filterBy="#{item.categoria}">
+                  <h:outputText value="#{item.categoria}"/>
+               </p:column>
+               <p:column headerText="Options" style="width: 50px;">
+                  <h:commandButton action="edit" 
+                                   actionListener="#{cursoBean.selecionar}" image="img/up.gif"/>
+                  <h:commandButton action="del" 
+                                   actionListener="#{cursoBean.selecionar}" image="img/del.png"/>
+               </p:column>  
+               <p:rowExpansion>  
+                  <h:panelGrid id="display" columns="2" cellpadding="4" style="border-color:white;">  
+                     <h:outputText value="Interessados"/>
+
+                     <h:outputText value="Instrutores"/>
+
+                     <p:dataTable value="#{item.interessados}" id="tbl"
+                                  var="itemI" scrollable="true" height="100">
+
+                        <p:column headerText="Nome">
+                           <h:outputText value="#{itemI.nome}"/>
+                        </p:column>
+
+                        <p:column headerText="Email">
+                           <h:outputText value="#{itemI.email}"/>
+                        </p:column>
+
+                        <p:column headerText="Tel. Residencial">
+                           <h:outputText value="#{itemI.telresidencial}"/>
+                        </p:column>   
+
+                     </p:dataTable>
+
+                     <p:dataTable value="#{item.cursoinstrutorList}" 
+                                  var="item2" scrollable="true" height="100">
+
+                        <p:column headerText="Nome">
+                           <h:outputText value="#{item2.chave.instrutor.nome}"/>
+                        </p:column>
+
+                        <p:column headerText="Período">
+                           <h:outputText value="#{item2.periodo}"/>
+                        </p:column>
+
+                        <p:column headerText="Unidade(s)">
+                           <h:outputText value="ABC" rendered="#{item2.unidadeAbc}" id="abc"/>
+                           <h:outputText value="UP" rendered="#{item2.unidadeUP}" id="up"/>
+                        </p:column>  
+
+                     </p:dataTable>
+
+                     <p:panel style="width:65px"> 
+                        <h:commandLink>  
+                           <p:graphicImage value="images/csv.png" />  
+                           <p:dataExporter type="csv" target="tbl" fileName="interessados" />  
+                        </h:commandLink>  
+                     </p:panel> 
+
+                  </h:panelGrid>  
+               </p:rowExpansion> 
+            </p:dataTable>
+         </div>
+
+      </h:form>
+   </h:body>
+</html>
+

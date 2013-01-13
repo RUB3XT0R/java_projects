@@ -1,0 +1,175 @@
+WebappLoader[]: Deploying class repositories to work directory H:\Lucky Biason Files\Trabalhos 2010\EstruturaDe Dados\.metadata\.plugins\org.eclipse.tomcat\ROOT
+ContextConfig[]: Added certificates -> request attribute Valve
+StandardManager[]: Seeding random number generator class java.security.SecureRandom
+StandardManager[]: Seeding of random number generator has been completed
+StandardWrapper[:default]: Loading container servlet default
+StandardWrapper[:invoker]: Loading container servlet invoker
+CoyoteConnector Coyote can't register jmx for protocol
+WebappLoader[/viewer]: Deploying class repositories to work directory H:\Lucky Biason Files\Trabalhos 2010\EstruturaDe Dados\.metadata\.plugins\org.eclipse.tomcat\viewer
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/axis-ant.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\axis-ant.jar
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/axis.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\axis.jar
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/commons-discovery-0.2.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\commons-discovery-0.2.jar
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/jaxrpc.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\jaxrpc.jar
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/saaj.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\saaj.jar
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/viewservlets.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\viewservlets.jar
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/wsdl4j-1.5.1.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\wsdl4j-1.5.1.jar
+ContextConfig[/viewer]: Added certificates -> request attribute Valve
+StandardManager[/viewer]: Seeding random number generator class java.security.SecureRandom
+StandardManager[/viewer]: Seeding of random number generator has been completed
+StandardWrapper[/viewer:default]: Loading container servlet default
+StandardWrapper[/viewer:invoker]: Loading container servlet invoker
+WebappLoader[]: Deploying class repositories to work directory H:\Lucky Biason Files\Trabalhos 2010\EstruturaDe Dados\.metadata\.plugins\org.eclipse.tomcat\ROOT
+ContextConfig[]: Added certificates -> request attribute Valve
+StandardManager[]: Seeding random number generator class java.security.SecureRandom
+StandardManager[]: Seeding of random number generator has been completed
+StandardManager[] IOException while loading persisted sessions: java.io.EOFException
+java.io.EOFException
+	at java.io.ObjectInputStream$PeekInputStream.readFully(Unknown Source)
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(Unknown Source)
+	at java.io.ObjectInputStream.readStreamHeader(Unknown Source)
+	at java.io.ObjectInputStream.<init>(Unknown Source)
+	at org.apache.catalina.util.CustomObjectInputStream.<init>(CustomObjectInputStream.java:103)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:408)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:655)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3590)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:821)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:807)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:595)
+	at org.eclipse.tomcat.internal.TomcatAppServer.start(TomcatAppServer.java:163)
+	at org.eclipse.birt.report.viewer.utilities.AppServerWrapper.startWebappServer(Unknown Source)
+	at org.eclipse.birt.report.viewer.utilities.AppServerWrapper.getAppServer(Unknown Source)
+	at org.eclipse.birt.report.viewer.utilities.WebappAccessor.start(Unknown Source)
+	at org.eclipse.birt.report.viewer.utilities.WebViewer.startWebApp(Unknown Source)
+	at org.eclipse.birt.report.viewer.utilities.WebViewer.startup(Unknown Source)
+	at org.eclipse.birt.report.designer.ui.preview.editors.ReportPreviewEditor.init(ReportPreviewEditor.java:326)
+	at org.eclipse.birt.report.designer.ui.editors.MultiPageReportEditor.addPage(MultiPageReportEditor.java:292)
+	at org.eclipse.birt.report.designer.ui.editors.MultiPageReportEditor.addPages(MultiPageReportEditor.java:259)
+	at org.eclipse.birt.report.designer.ui.editors.IDEMultiPageReportEditor.addPages(IDEMultiPageReportEditor.java:311)
+	at org.eclipse.ui.forms.editor.FormEditor.createPages(FormEditor.java:142)
+	at org.eclipse.ui.part.MultiPageEditorPart.createPartControl(MultiPageEditorPart.java:276)
+	at org.eclipse.birt.report.designer.ui.editors.ReportEditorProxy.createPartControl(ReportEditorProxy.java:121)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:596)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:372)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:566)
+	at org.eclipse.ui.internal.EditorAreaHelper.setVisibleEditor(EditorAreaHelper.java:263)
+	at org.eclipse.ui.internal.EditorManager.setVisibleEditor(EditorManager.java:1420)
+	at org.eclipse.ui.internal.EditorManager$5.run(EditorManager.java:1005)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:843)
+	at org.eclipse.ui.internal.EditorManager.restoreState(EditorManager.java:1000)
+	at org.eclipse.ui.internal.WorkbenchPage.restoreState(WorkbenchPage.java:2836)
+	at org.eclipse.ui.internal.WorkbenchWindow.restoreState(WorkbenchWindow.java:1936)
+	at org.eclipse.ui.internal.Workbench.doRestoreState(Workbench.java:2857)
+	at org.eclipse.ui.internal.Workbench.access$14(Workbench.java:2805)
+	at org.eclipse.ui.internal.Workbench$19.run(Workbench.java:1681)
+	at org.eclipse.ui.internal.Workbench.runStartupWithProgress(Workbench.java:1421)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:1679)
+	at org.eclipse.ui.internal.Workbench.access$12(Workbench.java:1650)
+	at org.eclipse.ui.internal.Workbench$17.run(Workbench.java:1529)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:1473)
+	at org.eclipse.ui.internal.WorkbenchConfigurer.restoreState(WorkbenchConfigurer.java:183)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:702)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1085)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1847)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:419)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:95)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:78)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:92)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:68)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:336)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:280)
+	at org.eclipse.core.launcher.Main.run(Main.java:977)
+	at org.eclipse.core.launcher.Main.main(Main.java:952)
+
+StandardManager[] Exception loading sessions from persistent storage
+java.io.EOFException
+	at java.io.ObjectInputStream$PeekInputStream.readFully(Unknown Source)
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(Unknown Source)
+	at java.io.ObjectInputStream.readStreamHeader(Unknown Source)
+	at java.io.ObjectInputStream.<init>(Unknown Source)
+	at org.apache.catalina.util.CustomObjectInputStream.<init>(CustomObjectInputStream.java:103)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:408)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:655)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3590)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:821)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:807)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:595)
+	at org.eclipse.tomcat.internal.TomcatAppServer.start(TomcatAppServer.java:163)
+	at org.eclipse.birt.report.viewer.utilities.AppServerWrapper.startWebappServer(Unknown Source)
+	at org.eclipse.birt.report.viewer.utilities.AppServerWrapper.getAppServer(Unknown Source)
+	at org.eclipse.birt.report.viewer.utilities.WebappAccessor.start(Unknown Source)
+	at org.eclipse.birt.report.viewer.utilities.WebViewer.startWebApp(Unknown Source)
+	at org.eclipse.birt.report.viewer.utilities.WebViewer.startup(Unknown Source)
+	at org.eclipse.birt.report.designer.ui.preview.editors.ReportPreviewEditor.init(ReportPreviewEditor.java:326)
+	at org.eclipse.birt.report.designer.ui.editors.MultiPageReportEditor.addPage(MultiPageReportEditor.java:292)
+	at org.eclipse.birt.report.designer.ui.editors.MultiPageReportEditor.addPages(MultiPageReportEditor.java:259)
+	at org.eclipse.birt.report.designer.ui.editors.IDEMultiPageReportEditor.addPages(IDEMultiPageReportEditor.java:311)
+	at org.eclipse.ui.forms.editor.FormEditor.createPages(FormEditor.java:142)
+	at org.eclipse.ui.part.MultiPageEditorPart.createPartControl(MultiPageEditorPart.java:276)
+	at org.eclipse.birt.report.designer.ui.editors.ReportEditorProxy.createPartControl(ReportEditorProxy.java:121)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:596)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:372)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:566)
+	at org.eclipse.ui.internal.EditorAreaHelper.setVisibleEditor(EditorAreaHelper.java:263)
+	at org.eclipse.ui.internal.EditorManager.setVisibleEditor(EditorManager.java:1420)
+	at org.eclipse.ui.internal.EditorManager$5.run(EditorManager.java:1005)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:843)
+	at org.eclipse.ui.internal.EditorManager.restoreState(EditorManager.java:1000)
+	at org.eclipse.ui.internal.WorkbenchPage.restoreState(WorkbenchPage.java:2836)
+	at org.eclipse.ui.internal.WorkbenchWindow.restoreState(WorkbenchWindow.java:1936)
+	at org.eclipse.ui.internal.Workbench.doRestoreState(Workbench.java:2857)
+	at org.eclipse.ui.internal.Workbench.access$14(Workbench.java:2805)
+	at org.eclipse.ui.internal.Workbench$19.run(Workbench.java:1681)
+	at org.eclipse.ui.internal.Workbench.runStartupWithProgress(Workbench.java:1421)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:1679)
+	at org.eclipse.ui.internal.Workbench.access$12(Workbench.java:1650)
+	at org.eclipse.ui.internal.Workbench$17.run(Workbench.java:1529)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:1473)
+	at org.eclipse.ui.internal.WorkbenchConfigurer.restoreState(WorkbenchConfigurer.java:183)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:702)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1085)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1847)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:419)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:95)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:78)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:92)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:68)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:336)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:280)
+	at org.eclipse.core.launcher.Main.run(Main.java:977)
+	at org.eclipse.core.launcher.Main.main(Main.java:952)
+
+StandardWrapper[:default]: Loading container servlet default
+StandardWrapper[:invoker]: Loading container servlet invoker
+CoyoteConnector Coyote can't register jmx for protocol
+WebappLoader[/viewer]: Deploying class repositories to work directory H:\Lucky Biason Files\Trabalhos 2010\EstruturaDe Dados\.metadata\.plugins\org.eclipse.tomcat\viewer
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/axis-ant.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\axis-ant.jar
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/axis.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\axis.jar
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/commons-discovery-0.2.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\commons-discovery-0.2.jar
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/jaxrpc.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\jaxrpc.jar
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/saaj.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\saaj.jar
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/viewservlets.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\viewservlets.jar
+WebappLoader[/viewer]: Deploy JAR /WEB-INF/lib/wsdl4j-1.5.1.jar to C:\Users\Lucas Biason\Desktop\eclipse\plugins\org.eclipse.birt.report.viewer_2.1.0.N20060628-1351\birt\WEB-INF\lib\wsdl4j-1.5.1.jar
+ContextConfig[/viewer]: Added certificates -> request attribute Valve
+StandardManager[/viewer]: Seeding random number generator class java.security.SecureRandom
+StandardManager[/viewer]: Seeding of random number generator has been completed
+StandardWrapper[/viewer:default]: Loading container servlet default
+StandardWrapper[/viewer:invoker]: Loading container servlet invoker
+StandardWrapper[/viewer:default]: Waiting for 2 instance(s) to be deallocated

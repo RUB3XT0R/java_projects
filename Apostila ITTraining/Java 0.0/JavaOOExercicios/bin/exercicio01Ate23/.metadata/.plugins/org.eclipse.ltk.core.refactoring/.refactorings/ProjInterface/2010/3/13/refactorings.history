@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Quadrado&apos; to &apos;InterfaceQuad&apos;&#x0D;&#x0A;- Original project: &apos;ProjInterface&apos;&#x0D;&#x0A;- Original element: &apos;Quadrado&apos;&#x0D;&#x0A;- Renamed element: &apos;InterfaceQuad&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Quadrado&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{Quadrado.java[Quadrado" matchStrategy="1" name="InterfaceQuad" qualified="false" references="true" similarDeclarations="false" stamp="1269256721687" textual="false" version="1.0"/>
+</session>

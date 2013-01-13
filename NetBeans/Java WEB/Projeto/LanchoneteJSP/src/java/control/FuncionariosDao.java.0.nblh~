@@ -1,0 +1,94 @@
+
+package control;
+
+import java.sql.*;
+import java.util.LinkedList;
+import java.util.List;
+import modelo.Funcionario;
+
+public class FuncionariosDao extends Dao{
+
+    public FuncionariosDao(){}
+
+    public boolean addFuncionario(Funcionario f){
+        try{
+           executeCommand(
+                "insert into funcionarios (id,cpf,nome,email,endereco,cidade,estado,telefone,salario,cargo)"
+                + "values(?,?,?,?,?,?,?,?,?,?)",
+                f.getId(),f.getCpf(),f.getNome(),f.getEmail(),f.getEndereco(),f.getCidade(),f.getEstado(),f.getTelefone(),f.getSalario(),f.getCargo()
+        );
+        return true;
+        } catch (SQLException ex) {
+            return false;
+        }
+    }
+
+    public boolean removeFuncionario(int idUsuario){
+         try{
+        executeCommand("delete from funcionarios where id=?",idUsuario);
+        return true;
+        } catch (SQLException ex) {
+            return false;
+        }
+    }
+
+    public boolean updateFuncionario(Funcionario f){
+        try{
+        executeCommand(
+                "update funcionarios set cpf=?,nome=?,email=?,endereco=?,cidade=?,estado=?,telefone=?,salario=?,cargo=? where id=?",
+                f.getCpf(),f.getNome(),f.getEmail(),f.getEndereco(),f.getCidade(),f.getEstado(),f.getTelefone(),f.getSalario(),f.getCargo(),f.getId()
+        );
+        return true;
+        } catch (SQLException ex) {
+            return false;
+        }
+    }
+
+    public boolean containFuncionario(long cpf){
+        try {
+            return contain("funcionarios","cpf",cpf);
+        } catch (SQLException ex) {
+            return true;
+        }
+    }
+        
+    public Funcionario getFuncionario(int id) throws SQLException{
+        ResultSet rs = executeQuery("select * from funcionarios where id=?",id);
+        return (rs.next())? populateFuncionario(rs) : null;
+    }
+
+    public List<Funcionario> getFuncionario(String nome) throws SQLException{
+        ResultSet rs = executeQuery("select * from funcionarios where nome like ?","%"+nome+"%");
+        List<Funcionario> toreturn = new LinkedList<Funcionario>();
+        while (rs.next())
+            toreturn.add(populateFuncionario(rs));
+        rs.close();
+        return toreturn;
+    }
+
+    public List<Funcionario> getAllFuncionarios() throws SQLException{
+        ResultSet rs = executeQuery("select * from funcionarios");
+        List<Funcionario> toreturn = new LinkedList<Funcionario>();
+        while (rs.next())
+            toreturn.add(populateFuncionario(rs));
+        rs.close();
+        return toreturn;
+    }
+
+    public static Funcionario populateFuncionario(ResultSet rs) throws SQLException {
+        Funcionario toreturn = new Funcionario();
+        toreturn.setId(rs.getInt("id"));
+        toreturn.setCpf(rs.getLong("cpf"));
+        toreturn.setNome(rs.getString("nome"));
+        toreturn.setEndereco(rs.getString("endereco"));
+        toreturn.setCidade(rs.getString("cidade"));
+        toreturn.setEstado(rs.getString("estado"));
+        toreturn.setTelefone(rs.getString("telefone"));
+        toreturn.setEmail(rs.getString("email"));
+        toreturn.setSalario(rs.getFloat("salario"));
+        toreturn.setCargo(rs.getString("cargo"));
+        return toreturn;
+    }
+
+     
+}

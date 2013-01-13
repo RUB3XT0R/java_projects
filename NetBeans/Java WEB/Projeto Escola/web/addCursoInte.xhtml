@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+            <table  bgcolor="white">
+               <caption>Alterar Cursos do Interessado</caption>
+               <tr>
+                  <td>Nome:</td>
+                  <td><h:outputText id="nome" value="#{interessadoBean.interessado.nome}"/></td>
+               </tr>
+               <tr>
+                  <td>Curso:</td>
+                  <td>
+                     <h:selectOneMenu value="#{interessadoBean.curso}">    
+                        <f:selectItems value="#{cursoBean.cursos}" var="curso" 
+                                       itemLabel="#{curso.nome}" itemValue="#{curso.id}"/>    
+                     </h:selectOneMenu>
+                  </td>
+               </tr>
+               <tr><td colspan="2">
+                     <p align="center">
+                        Adicionar <h:commandButton 
+                           action="#{interessadoBean.addCurso}" image="img/next.png"/>
+                     </p>
+                  </td> </tr>
+               <tr>
+                  <td colspan="2">
+                     <p:dataTable value="#{interessadoBean.interessado.cursos}" var="p">
+                        <p:column headerText="Nome"><h:outputText value="#{p.nome}"/></p:column>
+                        <p:column>
+                           <h:commandButton action="#{interessadoBean.delCurso(p)}" image="img/del.png"/>
+                        </p:column>
+                     </p:dataTable>
+                  </td>
+               </tr>
+               <tr>
+                  <td  colspan="2">
+                     Terminar <h:commandButton 
+                        action="#{interessadoBean.inserir}" image="img/next.png"/>
+                  </td>  
+               </tr>
+            </table>
+         </div>
+      </h:form>
+
+   </h:body>
+</html>
+

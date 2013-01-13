@@ -1,0 +1,14 @@
+
+public class Aluno3 extends Pessoa{
+	protected int ra;
+	
+	public Aluno3(String n, int r,int id){
+		super(n,id);
+		ra=r;
+	}
+	
+	public String toString(){
+		return String.format("%s: %s",
+				"Ra",this.ra);
+	}
+}

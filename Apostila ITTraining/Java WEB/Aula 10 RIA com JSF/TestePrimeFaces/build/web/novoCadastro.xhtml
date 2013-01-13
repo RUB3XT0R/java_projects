@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <f:view contentType="text/html">
+        <h:head>
+            <title>Facelet Title</title>
+            <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+        </h:head>
+        <h:body>
+            <p:fieldset legend="Meu Cadastro" toggleable="true">
+                <h:form>
+                    <h:panelGrid columns="2">
+                        <h:outputText value="Nome:"/>
+                        <p:inputText id="nome" value="#{tableBean.nome}" />
+                        <h:outputText value="Observações:" />
+                        <p:inputTextarea value="#{tableBean.observacao}" />
+                        <h:outputText value="Data cadastro:" />
+                        <p:calendar value="#{tableBean.dataCadastro}" />
+                        <h:outputText value="Telefone:" />
+                        <p:inputMask mask="(999)9999-9999" value="#{tableBean.telefone}" />
+                        <h:outputText value="CPF:" />
+                        <p:inputMask mask="999.999.999-99" value="#{tableBean.cpf}" />
+                        <h:outputText value="Descrição:" />
+                        <p:keyboard layout="qwertyBasic" value="#{tableBean.descricao}" />
+                        <h:outputText value="Senha:" />
+                        <p:keyboard password="true" keypadOnly="true" value="#{tableBean.descricao}" />
+                    </h:panelGrid>
+                    <p:separator style="width: 80%; height: 5px" />
+
+
+                    <p:growl id="avisos" showDetail="true" life="3000" />
+                    <p:messages id="mensagens" showDetail="true" />
+                    <p:commandButton value="Testar" actionListener="#{tableBean.testar}" update="avisos,mensagens"/>
+
+                </h:form>
+            </p:fieldset>
+        </h:body>
+    </f:view>
+</html>
+

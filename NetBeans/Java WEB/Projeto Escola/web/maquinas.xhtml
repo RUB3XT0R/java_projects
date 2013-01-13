@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form id="form">
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+
+            <h:commandButton action="index" image="img/prev.gif"/> 
+            <h:commandButton action="maquinas" actionListener="#{maquinaBean.novo}" image="img/add.png"/>
+
+            <p:separator/>
+            <h:panelGrid id="display" rendered="#{maquinaBean.showPanel}" columns="4">  
+               <f:facet name="header">Cadastro de Máquinas</f:facet>
+               <b>Nome:</b><p:inputText id="nome" value="#{maquinaBean.maquina.nome}"/>
+               <b>Internet:</b><h:selectBooleanCheckbox id="internet" value="#{maquinaBean.maquina.internet}"/>
+               <b>IP:</b><p:inputMask id="ip" mask="999.999.999.999" value="#{maquinaBean.maquina.ip}" 
+                                      style="width: 190px" maxlength="16"/>
+               <b>Unidade:</b><p:inputText id="unid" value="#{maquinaBean.maquina.unidade}" maxlength="3" 
+                                           style="width: 30px"/>
+               <b>Status</b><p:inputText id="status" value="#{maquinaBean.maquina.status}"/>
+               <b>Sala:</b><p:inputText id="sala" value="#{maquinaBean.maquina.sala}" maxlength="2" 
+                                        style="width: 20px"/>
+               <b>Descrição</b><p:inputTextarea id="descricao" value="#{maquinaBean.maquina.descricao}" 
+                                                style="width: 100%" />   
+               <h:outputText/><h:outputText/>
+               <p align="center"> Cadastrar 
+                  <h:commandButton action="#{maquinaBean.inserir}" image="img/next.png"/>
+                  Cancelar<h:commandButton action="#{maquinaBean.cancelar}" image="img/next.png"/></p>
+            </h:panelGrid>
+            <p:separator/>
+            <p:dataTable value="#{maquinaBean.maquinas}" var="item" selection="#{maquinaBean.maquina}"
+                         rowStyleClass="#{item.sala == 1 ? 'sap':''}"> 
+
+               <p:column headerText="Nome"><h:outputText value="#{item.nome}"/></p:column>
+
+               <p:column headerText="IP"><h:outputText value="#{item.ip}"/></p:column>
+
+               <p:column headerText="Status"><h:outputText value="#{item.status}"/></p:column>
+
+               <p:column headerText="Internet">
+                  <h:selectBooleanCheckbox id="OK" value="#{item.internet}"/>
+               </p:column>
+
+               <p:column headerText="Descrição" filterBy="#{item.descricao}" filterMatchMode="contains">
+                  <h:outputText value="#{item.descricao}"/></p:column>
+
+               <p:column headerText="Unidade" filterBy="#{item.unidade}">
+                  <h:outputText value="#{item.unidade}"/></p:column>
+
+               <p:column headerText="Sala" filterBy="#{item.sala}">
+                  <h:outputText value="#{item.sala}"/></p:column>  
+
+               <p:column headerText="Options" style="width: 50px;">
+                  <h:commandButton action="maquinas" 
+                                   actionListener="#{maquinaBean.selecionar}" image="img/up.gif"/>
+                  <h:commandButton action="del" 
+                                   actionListener="#{maquinaBean.selecionar}" image="img/del.png"/>
+               </p:column>  
+
+            </p:dataTable>
+
+         </div>
+
+      </h:form>
+   </h:body>
+</html>
+

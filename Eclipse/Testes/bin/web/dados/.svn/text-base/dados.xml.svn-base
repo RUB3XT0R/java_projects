@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+<Curso>
+	<Nome>Lógica de Programação</Nome>
+	<Codigo>logica</Codigo>
+	<Instrutor>Lucas Biason</Instrutor>
+	<Email>biasonlucky@hotmail.com</Email>
+	<Login>lgpittraining</Login>
+	<Senha>logica201103</Senha>
+</Curso>
+<Curso>
+	<Nome>Oracle PL\SQL</Nome>
+	<Codigo>oracleplsql</Codigo>
+	<Instrutor>Rodrigo Bonela</Instrutor>
+	<Email>rodrigobonela@hotmail.com</Email>
+	<Login>oracleplsql</Login>
+	<Senha>plsqlitt</Senha>
+</Curso>
+<Curso>
+	<Nome>Gestão de Projetos</Nome>
+	<Codigo>gestaoprojetos</Codigo>
+	<Instrutor>Gloria Maria Mattos Ramos</Instrutor>
+	<Email>gloria_gloria257@hotmail.com</Email>
+	<Login>gestaoprojetos</Login>
+	<Senha>gpitt2010</Senha>
+</Curso>
+<Curso>
+	<Nome>Sap Foundation</Nome>
+	<Codigo>sapfoundation</Codigo>
+	<Instrutor>Carlos Renato Fabri</Instrutor>
+	<Email>fabri@ittraining.com.br</Email>
+	<Login>sapittraining</Login>
+	<Senha>sapitt2010</Senha>
+</Curso>
+<Curso>
+	<Nome>Oracle Reports</Nome>
+	<Codigo>oraclereports</Codigo>
+	<Instrutor>Roberto Fernandes Sobrinho</Instrutor>
+	<Email>RFSobrinho@editorasaraiva.com.br</Email>
+	<Login>oraclereports</Login>
+	<Senha>reportsitt2010</Senha>
+</Curso>
+<Curso>
+	<Nome>Oracle DBA</Nome>
+	<Codigo>oracledba1</Codigo>
+	<Instrutor>Andre Ronchi</Instrutor>
+	<Email>andre.ronchi@ittraining.com.br</Email>
+	<Login>dbaittraining</Login>
+	<Senha>dba2010</Senha>
+</Curso>
+<Curso>
+	<Nome>ITIL V3 Foundation</Nome>
+	<Codigo>itilv3</Codigo>
+	<Instrutor>Edgar Bilha</Instrutor>
+	<Email>edgar_bilha@yahoo.com.br</Email>
+	<Login>itil2010</Login>
+	<Senha>ddcomt1</Senha>
+</Curso>
+<Curso>
+	<Nome>SQL Foundation</Nome>
+	<Codigo>sqlfoundation</Codigo>
+	<Instrutor>Cleber Pereira</Instrutor>
+	<Email>cleber.pereira@t-systems.com.br</Email>
+	<Login>orclsqlfund</Login>
+	<Senha>orasql1103</Senha>
+</Curso>
+<Curso>
+	<Nome>Oracle PL/SQL</Nome>
+	<Codigo>oracleplsql</Codigo>
+	<Instrutor>Cleber Pereira</Instrutor>
+	<Email>cleber.pereira@t-systems.com.br</Email>
+	<Login>orclplsql</Login>
+	<Senha>oracleplsql2011</Senha>
+</Curso>
+<Curso>
+	<Nome>Gestão de Segurança de Informação</Nome>
+	<Codigo>gestaoseguranca</Codigo>
+	<Instrutor>Edgar Bilha</Instrutor>
+	<Email>edgar_bilha@yahoo.com.br</Email>
+	<Login>gestaoseguranca</Login>
+	<Senha>gsiiso27001</Senha>
+</Curso>
+</Root>

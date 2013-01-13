@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+            <table  bgcolor="white">
+               <caption>Cadastro de Nova Turma</caption>
+               <tr>
+                  <td>Curso:</td>
+                  <td><h:selectOneMenu value="#{turmaBean.curso}">    
+                        <f:selectItems value="#{cursoBean.cursos}" var="curso" 
+                                       itemLabel="#{curso.nome}" itemValue="#{curso.id}"/>    
+                     </h:selectOneMenu></td>
+                  <td>Unid:</td>
+                  <td><h:selectOneMenu value="#{turmaBean.turma.unidade}">    
+                        <f:selectItem itemValue="UP" itemLabel="UP"/>      
+                        <f:selectItem itemValue="ABC" itemLabel="ABC"/>       
+                     </h:selectOneMenu></td>
+               </tr>
+               <tr>
+                  <td>Data Inicio:</td>
+                  <td><p:calendar value="#{turmaBean.turma.dataInicio}"  size="7" showOn="button"/></td>
+                  <td>Data Fim:</td>
+                  <td><p:calendar value="#{turmaBean.turma.dataFim}"  size="7" showOn="button"/></td>
+               </tr>
+               <tr>
+                  <td>Duração:</td>
+                  <td><p:inputTextarea value="#{turmaBean.turma.duracao}" rows="3" cols="10"/></td>
+                  <td>Sala:</td>
+                  <td><h:selectOneMenu value="#{turmaBean.turma.sala}">    
+                        <f:selectItem itemValue="1" itemLabel="1"/>      
+                        <f:selectItem itemValue="2" itemLabel="2"/>   
+                     </h:selectOneMenu></td>
+               </tr>
+               
+               <tr>
+                  <td colspan="4">
+                     <p align="center">
+                        Cadastrar <h:commandButton 
+                           action="#{turmaBean.inserir}" image="img/next.png"/>
+                     </p>
+                  </td>                        
+               </tr>
+            </table>
+         </div>
+      </h:form>
+
+   </h:body>
+</html>
+

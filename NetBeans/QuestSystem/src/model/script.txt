@@ -1,0 +1,46 @@
+create database questtraining;
+use questtraining;
+
+create table cursos(
+cod_Curso integer auto_increment primary key,
+nome varchar(45)
+);
+
+drop table interessados_cursos;
+drop table interessados;
+create table interessados(
+cod_Interessado integer auto_increment primary key,
+nome varchar(45) not null,
+email varchar(50) not null,
+telefoneR varchar(14) not null,
+telefoneC varchar(14) not null,
+celular varchar(14) not null
+);
+alter table interessados add unique (email);
+
+create table interessados_cursos(
+cod_Curso integer not null,
+cod_Interessado integer not null,
+primary key(cod_Curso,cod_Interessado),
+FOREIGN KEY (cod_Curso)
+REFERENCES questtraining.cursos (cod_Curso)
+ON DELETE cascade ON UPDATE cascade,
+FOREIGN KEY (cod_Interessado)
+REFERENCES questtraining.interessados (cod_Interessado)
+ON DELETE cascade ON UPDATE cascade
+);
+
+/* Consulta de cursos do interessado */
+select cod_Curso,cursos.nome 
+from cursos 
+join interessados_cursos  using (cod_Curso)
+join interessados using (cod_Interessado)
+where cod_Interessado=0;
+
+/* Consulta de interressados por curso */
+select DISTINCT interessados.nome,cod_Interessado,email,telefoneR,telefoneC,celular
+from interessados
+join interessados_cursos  using (cod_Interessado)
+join cursos using (cod_Curso)
+where cursos.nome="";
+/* ou: where cursos.cod_Curso=?  */

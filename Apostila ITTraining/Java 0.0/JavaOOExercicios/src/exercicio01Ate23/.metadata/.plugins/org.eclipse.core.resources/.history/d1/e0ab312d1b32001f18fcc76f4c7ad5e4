@@ -1,0 +1,10 @@
+
+public class Teste {
+
+	public static void main(String[] args) {
+		Aluno3 al = new Aluno3("Lucas",5495,18);
+		System.out.printf("%s\n\n%s",
+				"Resultado:",al.toString());
+	}
+
+}

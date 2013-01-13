@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+            <table  bgcolor="white">
+               <caption>Alterar Cursos do Instrutor</caption>
+               <tr>
+                  <td>Nome:</td>
+                  <td><h:outputText id="nome" value="#{instrutorBean.instrutor.nome}"/></td>
+               </tr>
+               <tr>
+                  <td>Curso:</td>
+                  <td>
+                     <h:selectOneMenu value="#{instrutorBean.curso}">    
+                        <f:selectItems value="#{cursoBean.cursos}" var="curso" 
+                                       itemLabel="#{curso.nome}" itemValue="#{curso.id}"/>    
+                     </h:selectOneMenu>
+                  </td>
+               </tr>
+               <tr>
+                  <td>Unidades:</td>
+                  <td>
+                     <h:selectBooleanCheckbox id="abc" 
+                        value="#{instrutorBean.ci.unidadeAbc}"/>ABC
+                     |<h:selectBooleanCheckbox id="up" 
+                        value="#{instrutorBean.ci.unidadeUP}"/>UP</td>
+               </tr>
+               <tr>
+                  <td>Periodo:</td>
+                  <td>
+                     <h:selectOneMenu value="#{instrutorBean.ci.periodo}">
+                        <f:selectItem itemValue="Semana"/>
+                        <f:selectItem itemValue="Sábado"/>
+                        <f:selectItem itemValue="Domingo"/>
+                        <f:selectItem itemValue="Fim de Semana"/>
+                        <f:selectItem itemValue="Semana e Sábado"/>
+                        <f:selectItem itemValue="Semana e Domingo"/>
+                        <f:selectItem itemValue="Todos"/>
+                     </h:selectOneMenu>
+                  </td>
+               </tr>
+               <tr><td colspan="2">
+                     <p align="center">
+                        Adicionar <h:commandButton 
+                           action="#{instrutorBean.addCurso}" image="img/next.png"/>
+                     </p>
+                  </td> </tr>
+               <tr>
+                  <td colspan="2">
+                     <p:dataTable value="#{instrutorBean.instrutor.cursoinstrutorList}" var="p">
+                        <p:column headerText="Nome">
+                           <h:outputText value="#{p.chavePK.curso.nome}"/>
+                        </p:column>
+                        <p:column headerText="Periodo">
+                           <h:outputText value="#{p.periodo}"/>
+                        </p:column>
+                        <p:column headerText="Unidade(s):">
+                        <h:panelGrid columns="2" style="border-color: white">
+                           <h:outputText value="ABC" rendered="#{p.unidadeAbc}" id="abc"/>
+                           <h:outputText value="UP" rendered="#{p.unidadeUP}" id="up"/>
+                         </h:panelGrid>
+                        </p:column>
+                        <p:column>
+                           <h:commandButton action="#{instrutorBean.delCurso(p)}" image="img/del.png"/>
+                        </p:column>
+                     </p:dataTable>
+                  </td>
+               </tr>
+               <tr>
+                  <td  colspan="2">
+                     Terminar <h:commandButton 
+                        action="instrutores" image="img/next.png"/>
+                  </td>  
+               </tr>
+            </table>
+         </div>
+      </h:form>
+
+   </h:body>
+</html>
+

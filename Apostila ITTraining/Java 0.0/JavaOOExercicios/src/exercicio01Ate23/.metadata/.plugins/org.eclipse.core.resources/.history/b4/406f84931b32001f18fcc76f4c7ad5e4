@@ -1,0 +1,15 @@
+
+public class Pessoa {
+	protected String nome;
+	protected int idade;
+	public Pessoa(String n,int id){
+		nome=n;
+		idade=id;
+	}
+	public String setNome(){
+		return nome;
+	}
+	public int setId(){
+		return idade;
+	}
+}

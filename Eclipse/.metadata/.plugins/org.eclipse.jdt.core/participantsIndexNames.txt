@@ -1,0 +1,13 @@
+INDEX VERSION 1.126
+C:\Users\Lucas\Desktop\WorkSpaceJava\Eclipse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2991970811.index
+\Testes\src
+C:\Users\Lucas\Desktop\WorkSpaceJava\Eclipse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\955412153.index
+\Testes\src
+C:\Users\Lucas\Desktop\WorkSpaceJava\Eclipse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4264164762.index
+\Testes\src
+C:\Users\Lucas\Desktop\WorkSpaceJava\Eclipse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\940009122.index
+\IMalling Marketing Para QuestTraining v.3.0 Lucas Biason\src
+C:\Users\Lucas\Desktop\WorkSpaceJava\Eclipse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2165445159.index
+\projetoSom\src
+C:\Users\Lucas\Desktop\WorkSpaceJava\Eclipse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3760199006.index
+\ProjetoCalculadora\src

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+   <h:head>
+      <title>Pizzaria ITTraining</title>
+   </h:head>
+   <h:body>
+      <img src="LogoItt.jpg"/><br/>
+      <h1>Projeto Pizza</h1>
+      <hr/>     
+      <h:form>
+         <h4>Visualizando Pedido nº<h:outputText value="#{pedidoBean.pedido.codigo}"/></h4>
+         <b>Cliente:</b><h:outputText value=" #{pedidoBean.pedido.cliente.nome}"/><br/>
+         <b><h:outputText value="Pizzas:"/></b>
+         <h:dataTable value="#{pedidoBean.pedido.pizzasPedidas}" var="p" border="1" cellspacing="0">
+            <h:column>
+               <f:facet name="header"><h:outputText value="Codigo"/></f:facet>
+               <h:outputText value="#{p.codigo}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header"><h:outputText value="Nome"/></f:facet>
+               <h:outputText value="#{p.nome}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header"><h:outputText value="Descrição"/></f:facet>
+               <h:outputText value="#{p.descricao}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header"><h:outputText value="Preço (R$)"/></f:facet>
+               <h:outputText value="#{p.preco}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header"><h:outputText value="Nº. de Pedaços"/></f:facet>
+               <h:outputText value="#{p.n_pedacos}"/>
+            </h:column>
+         </h:dataTable>
+         
+         <h:commandButton action="pedidos" value="Voltar"/>
+      </h:form>
+      <br/><hr/>ITTraining - Curso Java WEB
+   </h:body>
+</html>

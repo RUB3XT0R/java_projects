@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+   <h:head>
+      <title>Pizzaria ITTraining</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <img src="LogoItt.jpg"/><br/>
+      <h1>Projeto Pizza</h1>
+      <hr/> 
+      <h:form>
+         <h:outputText 
+            value="Deseja cancelar o pedido #{pedidoBean.pedido.codigo}?"/>
+         <h:panelGrid columns="2">
+            <p:commandButton action="#{pedidoBean.remover}" value="Remover >>" ajax="false"/>
+            <p:commandButton action="pedidos" immediate="True" 
+                             value="Cancelar" ajax="false"/>
+         </h:panelGrid>
+      </h:form>
+      <br/><hr/>ITTraining - Curso Java WEB
+   </h:body>
+</html>
+

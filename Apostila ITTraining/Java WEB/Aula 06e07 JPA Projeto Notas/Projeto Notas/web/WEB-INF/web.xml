@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>CursoControl</servlet-name>
+        <servlet-class>controle.CursoControl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>cursoControl</servlet-name>
+        <servlet-class>controle.cursoControl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>alunoControl</servlet-name>
+        <servlet-class>controle.alunoControl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>notasControl</servlet-name>
+        <servlet-class>controle.notasControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CursoControl</servlet-name>
+        <url-pattern>/CursoControl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cursoControl</servlet-name>
+        <url-pattern>/cursoControl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>alunoControl</servlet-name>
+        <url-pattern>/alunoControl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>notasControl</servlet-name>
+        <url-pattern>/notasControl</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

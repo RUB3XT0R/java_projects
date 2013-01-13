@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse/Estudos/IMalling Marketing Para QuestTraining v.3.0 Lucas Biason/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse/Estudos/IMalling Marketing Para QuestTraining v.3.0 Lucas Biason/dsn.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse/Estudos/IMalling Marketing Para QuestTraining v.3.0 Lucas Biason/imap.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse/Estudos/IMalling Marketing Para QuestTraining v.3.0 Lucas Biason/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse/Estudos/IMalling Marketing Para QuestTraining v.3.0 Lucas Biason/mailapi.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse/Estudos/IMalling Marketing Para QuestTraining v.3.0 Lucas Biason/pop3.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse/Estudos/IMalling Marketing Para QuestTraining v.3.0 Lucas Biason/smtp.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

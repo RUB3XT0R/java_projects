@@ -1,0 +1,12 @@
+﻿Anexo:Proposta Comercial Curso Oracle PL SQL.pdf
+<font color=#c00000>
+<p><b>Oracle PL/SQL</b></font><font color=#365F91>Carga Horária de 30 Horas</p>
+<p><b>Unidade Paulista:</b></font><br>
+<font color=#76923c><b>Semana:</b>31 de outubro - </font><font color=#365F91>7 dias semana das 19:00 às 23:00 </font><br>
+<br>
+<font color=#76923c><b>Final de Semana:</b>22 de novembro - </font><font color=#365F91>3 sábados das 08:00 às 18:30
+<br/>
+<p><b>Unidade ABC:</b></font><br>
+<font color=#76923c><b>Semana:</b>22 de outubro - </font><font color=#365F91>3 sabados das 08:00 às 18:30</p>
+</font><br><br>
+<font color=black><b>Investimento: R$ 1.695,00</b><br><b>Por:</b>  R$ 1350,00 à vista ou em até 10x de R$ 152,00</font><br><hr><br>

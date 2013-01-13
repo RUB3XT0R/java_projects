@@ -1,0 +1,43 @@
+#work {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+#work li {
+    float:left;
+    width:235px;
+    margin:10px;
+    display:inline;
+    padding:3px;
+    background:#fff;
+    border:1px solid #cad789;
+    height:154px;}
+#work li a {
+    border:none;
+}
+#work p {
+    margin-bottom:0;
+}
+
+#work li .show{
+    display:block;
+    width:235px;
+    height:154px;
+}
+#work li .hide {
+    color:#d4df9d;
+    text-align: left;
+    height: 0;
+    overflow: hidden;
+    background-color:#687b00;
+}
+#work li:hover .hide{
+    cursor: pointer;
+    height: 133px;
+    padding:10px;
+    width:215px;
+}
+#work li:hover .show {
+    height: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,37 @@
+package Lista;
+
+import javax.swing.JOptionPane;
+
+
+public class ListaAlunos {
+	public static void main(String[] args) {
+		Aluno al=null;
+		ListaAlunosAux p= new ListaAlunosAux();
+		ListaDuplaEncadeada lin,lin2;
+		lin= new ListaDuplaEncadeada("Lista 1");
+		lin2= new ListaDuplaEncadeada("Lista 2");
+		
+		lin=p.put(lin);
+		System.out.println("\n"+lin.getName());
+		p.view(lin);
+		p.viewC(lin);
+		lin=p.put(lin2);
+		System.out.println("\n"+lin2.getName());
+		p.view(lin2);
+		
+		System.out.println("\nLista 1 se torna uma cópia de lista 2");
+		lin.assign(lin2);
+		p.view(lin);
+		
+		int ele=Integer.parseInt(JOptionPane.showInputDialog(null,"Entre com o indice elemento que deseja capturar:","Pegando um elemento",JOptionPane.QUESTION_MESSAGE));
+		System.out.println("\nExibindo o elemento número"+ele);
+		al = p.getElementDet(ele,lin);
+		System.out.println("Nome: "+al.getNome()+", idade: "+al.getIdade()+", Ra: "+al.getRa());
+
+		ele=Integer.parseInt(JOptionPane.showInputDialog(null,"Entre com o indice do elemento que deseja capturar:","Excluido um elemento",JOptionPane.QUESTION_MESSAGE));
+		System.out.println("\nLista após a exclusão do elemento número "+ele);
+		lin.extract(p.getElementDet(ele,lin));
+		p.view(lin);
+		
+	}//main
+}//fim de ListaAlunos

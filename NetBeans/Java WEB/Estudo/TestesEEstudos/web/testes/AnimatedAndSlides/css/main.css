@@ -1,0 +1,211 @@
+body {
+	background: url(../img/body-bkg.png) repeat scroll;
+	margin: 0;
+	padding: 0;
+}
+.container{
+	margin: 0pt auto;
+	width:1000px;
+}
+#header{
+	background: url(../img/hdr-bkg.png) repeat-x scroll;
+	height:181px;
+	position:absolute;
+	z-index :100;
+	top: 0px;
+	left:0px;
+	width:100%;
+}
+#header table{
+    margin-left: 90px;
+}
+#header img{
+    width: 120px;
+    height: 120px;
+    border: none;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+#header h1{
+    color:#d3d564;
+}
+#header p{
+    color:#8cb3d0;
+}
+#navigation{
+	height:60px;
+
+}
+#home, #home div, 
+#about, #about div, 
+#services , #services div, 
+#solutions, #solutions div, 
+#contact,  #contact div
+#teste, #teste div{
+	height:80px;
+	position:absolute;
+	width:97px;
+	float:left;
+}
+#home, #about, #services, #solutions, #contact,#teste{
+	background-image: url(../img/nav.png);
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	top:171px;
+}
+#home{
+	background-position: 0px -25px;
+	margin-left:6px;
+}
+#about{
+	background-position: -98px -25px;
+	margin-left:105px;
+}
+#services{
+	background-position: -196px -25px;
+	margin-left:204px;
+}
+#solutions{
+	background-position: -294px -25px;
+	margin-left:303px;
+}
+#contact{
+	background-position: -392px -25px;
+	margin-left:402px;
+}
+#teste{
+	background-position: -490px -25px;
+	margin-left:501px;
+}
+#home div, #about div, #services div, #solutions div, #contact div,#teste div {
+	background-image: url(../img/white.png);
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: 0px -60px;	
+}	
+.pri-nav a{
+	display:block;
+	text-decoration:none;
+	text-indent:-30000px;
+}
+.content{
+	margin-top:160px;
+
+}
+#content-title{
+	background: url(../img/content-title.png) no-repeat scroll ;
+	height:284px;
+	position:relative;
+	width:100%;
+
+}
+#footer{
+    clear: both; /*não fuça*/
+    color: #cccccc;
+    background: url(../img/foot-bkg.png) repeat-x scroll ;
+    height:40px;
+    position:absolute;
+    z-index :100;
+    width:100%;
+    bottom:0;
+    text-align: center;
+}
+#footer p{
+    bottom: 0;
+}
+/*
+CSS para o menu
+*/
+
+/*
+CSS para o slide show
+*/
+a img { border: none; }
+#blocoDestaques {
+	position: relative;
+}
+#blocoDestaques ul,
+#blocoDestaques ul li {
+	list-style: none;
+}
+#blocoDestaques,
+#blocoDestaques ul,
+#blocoDestaques ul li,
+#blocoDestaques ul li img {
+	margin: 0px;
+	padding: 0px;
+
+	width: 900px;
+	height: 235px;
+    margin-left: 4px;
+}
+#blocoDestaques ul li {
+	position: relative;
+}
+#blocoDestaques ul li div.fundo {
+	width: 900px;
+	height: 40px;
+ margin-left: 4px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background: black;
+}
+#blocoDestaques ul li p {
+	margin: 0px;
+	padding: 10px 15px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+
+	line-height: 20px;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 14px;
+}
+#blocoDestaques ul li p a {
+	color: white;
+	text-decoration: none;
+}
+#blocoDestaques a.faixa {
+	width: 100px;
+	height: 100px;
+margin-left: 10px;
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	z-index: 100;
+
+	background: transparent url('../img/faixa.png') 0 0 no-repeat;
+}
+#blocoDestaques div.paginas {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+
+	z-index: 100;
+}
+#blocoDestaques div.paginas a {
+	height: 20px;
+	width: 20px;
+
+	display: block;
+	float: left;
+	margin-left: 2px;
+
+	color: white;
+	font-size: 10px;
+	font-family: Verdana, Arial, sans-serif;
+	text-decoration: none;
+	text-align: center;
+	line-height: 20px;
+	outline: none;
+
+	background: black;
+}
+#blocoDestaques div.paginas a:hover,
+#blocoDestaques div.paginas a.activeSlide {
+	background: #9FAA27;
+	font-weight: bold;
+}
+#blocoDestaques ul li p,
+#blocoDestaques ul li div.fundo { display: none; }

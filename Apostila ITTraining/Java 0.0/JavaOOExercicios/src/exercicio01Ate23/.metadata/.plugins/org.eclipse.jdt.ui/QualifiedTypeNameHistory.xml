@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="vetclass"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="Pilha.StackAsLinkedList"/>
+<fullyQualifiedTypeName name="Pilha.Stack"/>
+<fullyQualifiedTypeName name="Abst.Int"/>
+<fullyQualifiedTypeName name="filas.ListaEncadeada.EmptyListException"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="Abst.Association"/>
+<fullyQualifiedTypeName name="Abst.Str"/>
+<fullyQualifiedTypeName name="java.io.StreamTokenizer"/>
+<fullyQualifiedTypeName name="Abst.HashTable"/>
+<fullyQualifiedTypeName name="Abst.ChainedHashTable"/>
+<fullyQualifiedTypeName name="Abst.Container"/>
+<fullyQualifiedTypeName name="estruturas.Tree"/>
+<fullyQualifiedTypeName name="Abst.AbstractPrePostVisitor"/>
+<fullyQualifiedTypeName name="Abst.Visitor"/>
+<fullyQualifiedTypeName name="estruturas.QueueAsLinkedList"/>
+<fullyQualifiedTypeName name="estruturas.Queue"/>
+<fullyQualifiedTypeName name="estruturas.PreOrder"/>
+<fullyQualifiedTypeName name="estruturas.Stack"/>
+<fullyQualifiedTypeName name="estruturas.StackAsLinkedList"/>
+<fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+<fullyQualifiedTypeName name="Abst.AbstractTree"/>
+<fullyQualifiedTypeName name="Abst.PrePostVisitor"/>
+<fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.io.Reader"/>
+<fullyQualifiedTypeName name="Abst.Chr"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="Abst.SearchableContainer"/>
+<fullyQualifiedTypeName name="Lista.ListaSimples.No"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="java.util.concurrent.LinkedBlockingQueue"/>
+<fullyQualifiedTypeName name="java.util.concurrent.DelayQueue"/>
+<fullyQualifiedTypeName name="java.util.PriorityQueue"/>
+<fullyQualifiedTypeName name="ListaEncadeada.EmptyListException"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.Queue"/>
+</qualifiedTypeNameHistroy>

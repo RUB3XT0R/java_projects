@@ -1,0 +1,324 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    background-image: url(../img/topo.jpg);
+    background-repeat: repeat-x;
+    font-family: cursive;
+}
+#corpo{
+    position:absolute;
+    min-width:900px;
+    left:10%;
+    color: #666;
+    text-align: center;
+    top: 16px;
+}
+
+/* CSS Formulário de Contatos */
+
+#mask {
+    position:fixed;
+    left:0px;
+    top:0px;
+    z-index:9000;
+    background-color:#000;
+    display:none;
+}
+#boxes .window {
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:410px;
+    display:none;
+    z-index:9999;
+    padding:0px;
+    float: left;
+}
+#boxes #dialog {
+    width:920px; 
+    height:450px;
+    padding:0px;
+    background-color:#ffffff;
+    text-align: left;
+    float: left;
+    font-size: larger;
+}
+#boxes #dialog label,  input, textarea {
+    display: block;
+    float: left;
+}
+#boxes #dialog label {    
+    text-align: left;
+    width: 40px;
+    padding-bottom: 5px;
+    width: 100px;
+    padding-right: 10px;
+}
+#boxes #dialog br {
+    clear: left;
+}
+#FormL{
+    width: 350px;
+    max-width: 350px;
+    left: 11px;
+    position: absolute;
+    float: left;
+}
+#FormR{
+    width: 350px;
+    max-width: 350px;
+    left: 330px;
+    position: absolute;
+    float: left;
+}
+#FormR2{
+    width: 350px;
+    max-width: 350px;
+    left: 480px;
+    position: absolute;
+    float: left;
+}
+#FormR3{
+    width: 350px;
+    max-width: 350px;
+    left: 630px;
+    position: absolute;
+    float: left;
+}
+#FormR4{
+    width: 350px;
+    max-width: 350px;
+    left: 780px;
+    position: absolute;
+    float: left;
+    padding-right: 10px;
+}
+#formSubmit{
+    position: absolute;
+    bottom: 0px;
+    top:90%;
+    left: 40%;
+}
+#formSubmit input{
+    background-color: #666;
+    color: #FFF;
+    border: 0px;
+}#formSubmit input:hover{
+    background-color: #FFF;
+    color:#666;
+    border: 0px;
+}
+#titleForm{
+    width:100%;
+    background-color: #666;
+    color: #ffffff;
+    text-align: center;
+    top:0px;
+    padding-top: 5px;
+}
+
+
+/* CSS Menu horizontal */
+
+ul#menu {
+    top:0px;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+ul#menu li{
+    float: left;
+    padding-right:118px;
+    padding-left:0px;
+}
+.home a{
+    position:absolute;
+    background-image:url(../img/botaoActiveHome.png);
+    width:118px;
+    height:88px;
+    text-decoration: none;
+    top: 20px;
+}
+.home a:hover{
+    background-image:url(../img/botaoActiveHomeHouver.png);
+}
+.empresa a{
+    position:absolute;
+    background-image:url(../img/botaoNormalEmpresa.png);
+    width:118px;
+    height:88px;
+    text-decoration: none;
+    top: 20px;
+}
+.empresa a:hover{
+    background-image:url(../img/botaoNormalEmpresaHouver.png);
+}
+.depoimentos a{
+    position:absolute;
+    background-image:url(../img/botaoNormalWork.png);
+    width:118px;
+    height:88px;
+    text-decoration: none;
+    top:20px;
+}
+.depoimentos a:hover{
+    background-image:url(../img/botaoNormalWorkHouver.png);
+}
+.calendario a{
+    position:absolute;
+    background-image:url(../img/botaoNormalCalendario.png);
+    width:118px;
+    height:88px;
+    text-decoration: none;
+    top: 20px;
+}
+.calendario a:hover{
+    background-image:url(../img/botaoNormalCalendarioHouver.png);
+}
+.localizacao a{
+    position:absolute;
+    background-image:url(../img/botaoNormalLocalizacao.png);
+    width:118px;
+    height:88px;
+    text-decoration: none;
+    top: 20px;
+}	
+.localizacao a:hover{
+    background-image:url(../img/botaoNormalLocalizacaoHouver.png);
+}
+
+
+/* CSS Destaques */
+
+a img { border: none; }
+#blocoDestaques {
+    position: relative;	
+    top:5px;
+}
+#blocoDestaques ul,
+#blocoDestaques ul li {
+    list-style: none;	
+}
+#blocoDestaques,
+#blocoDestaques ul,
+#blocoDestaques ul li,
+#blocoDestaques ul li img {
+    margin: 0px;
+    padding: 0px;
+    width: 600px;
+    height: 215px;
+}
+#blocoDestaques ul li {
+    position: relative;
+}
+#blocoDestaques ul li div.fundo {
+    width: 600px;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: black;
+    opacity:0.65;
+    -moz-opacity: 0.65;
+    filter: alpha(opacity=65);
+}
+#blocoDestaques ul li p {
+    margin: 0px;	
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    line-height: 20px;
+    font-family: Verdana, Arial, sans-serif;	
+    font-size: 12px;
+}
+#blocoDestaques ul li p a {
+    color: white;
+    text-decoration: none;	
+}	
+#blocoDestaques a.faixa { 
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: 100;
+    background: transparent url('../img/faixa.png') 0 0 no-repeat;
+}
+#blocoDestaques div.paginas {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 100;
+}
+#blocoDestaques div.paginas a {
+    height: 20px;
+    width: 20px;
+    display: block;
+    float: left;
+    margin-left: 2px;
+    color: white;
+    font-size: 10px;
+    font-family: Verdana, Arial, sans-serif;
+    text-decoration: none;	
+    text-align: center;
+    line-height: 20px;
+    outline: none;
+    background: black;
+}
+#blocoDestaques div.paginas a:hover,
+#blocoDestaques div.paginas a.activeSlide {
+    background: #791f1f;
+    font-weight: bold;
+}
+#blocoDestaques ul li p,
+#blocoDestaques ul li div.fundo { display: none; }
+
+
+/* CSS Menu Vertical */
+
+ul#sliding-navigation  {  
+    list-style: none;  
+    font-size: .90em;  
+    margin:0px;  
+    padding-left:40px;
+    padding-top:30px;
+}  
+ul#sliding-navigation li.sliding-element h3,  
+ul#sliding-navigation li.sliding-element a  {  
+    display: block;  
+    width: 150px;  
+    padding: 5px 15px;  
+    margin: 0;  
+    margin-bottom: 5px;  
+}    
+ul#sliding-navigation li.sliding-element h3  {  
+    color: #CCC;  
+    background: #333;  
+    border: 1px solid #1a1a1a;  
+    font-weight: bolder;  
+    font-size:large
+}  
+ul#sliding-navigation li.sliding-element a  {  
+    color: #fff;  
+    background: #222;  
+    border: 1px solid #1a1a1a;  
+    text-decoration: none;  
+}  
+ul#sliding-navigation li.sliding-element a:hover { color: #d24b4b; }  
+.tableform{
+    padding-bottom:0px;
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:0px;
+}
+
+/* CSS Tabela Curriculo */
+
+#curriculoTable{
+}
+#curriculoTable td{
+    text-align: justify;
+}

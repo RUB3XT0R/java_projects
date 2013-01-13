@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+            <h:panelGrid id="display" columns="4" cellpadding="4">  
+               <f:facet name="header">Deseja realmente excluir a máquina a seguir?</f:facet> 
+               <b>Nome:</b><h:outputText value="#{maquinaBean.maquina.nome}"/>  
+               <b>Internet:</b><h:selectBooleanCheckbox id="internet" value="#{maquinaBean.maquina.internet}"/>
+               <b>IP:</b><h:outputText id="ip" value="#{maquinaBean.maquina.ip}"/>
+               <b>Unidade:</b><h:outputText id="unid" value="#{maquinaBean.maquina.unidade}"/>
+               <b>Status</b><h:outputText id="status" value="#{maquinaBean.maquina.status}"/>
+               <b>Sala:</b><h:outputText id="sala" value="#{maquinaBean.maquina.sala}"/>
+               <b>Descrição</b><h:outputText id="descricao" value="#{maquinaBean.maquina.descricao}"/>
+            </h:panelGrid>
+            <p:separator/>
+            <b>Sim, excluir</b><h:commandButton action="#{maquinaBean.remover}" image="img/next.png"/>
+            <br/>(Para cancelar utilze o menu ao lado.)
+         </div>
+      </h:form>
+
+   </h:body>
+</html>
+

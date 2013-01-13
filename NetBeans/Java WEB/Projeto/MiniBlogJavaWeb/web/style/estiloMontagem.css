@@ -1,0 +1,152 @@
+body {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#topo {
+	position:absolute;
+	width:940px;
+	height:140px;
+	left: 5px;
+	top: 5px;
+	padding:5px;
+        text-align: center;
+    color: #cc6600;
+}
+#menu {
+	position:absolute;
+	width:940px;
+	height:26px;
+	left: 5px;
+	top: 155px;
+	background-image:url(../imagens/menu.jpg);
+	padding:2px 5px;
+}
+#menu ul {
+	margin:0px;
+}
+#menu li {
+	display:inline;
+	list-style:none;
+	margin-right:20px;
+}
+#menu li a {
+	font-weight:bold;
+	color:#330000;
+	text-decoration:none;
+	font-size:12px;
+}
+#menu li a:hover {
+        background-image: url(../imagens/menuBarra.jpg);
+}
+#cntdPrincipal {
+	position:absolute;
+	width:590px;
+	height:195px;
+	left: 5px;
+	top: 195px;
+}
+#cntdLateral {
+	position:absolute;
+	width:320px;
+	height:395px;
+	left: 625px;
+	top: 195px;
+	background-image:url(../imagens/lateral.jpg) ;
+	padding:5px;
+}
+#cntdLateral h3{
+    background-image: url(../imagens/menuBarra.jpg);
+    width: 332px;
+    text-align: center;
+}
+#rodape {
+    clear: both; /*não fuça*/
+    color: #000000;
+    font-size: 90%;
+    height: 50px;
+    width: 950px;
+    position:absolute;
+  bottom:0;
+    background-image:url(../imagens/rodape.jpg);
+    vertical-align: middle;
+}
+
+
+/*-----------------------------------------------------------------------------
+- Estilo da Página
+-----------------------------------------------------------------------------*/
+body{
+    color:black;
+    margin: 0;
+    padding: 0;
+    font: 85% arial, hevetica, sans-serif;
+    text-align: center;
+
+}
+a:link {
+    color: #555555;
+}
+a:visited {
+    color: #660000;
+}
+a:focus {
+    color: #FFFFFF;
+}
+a:hover {
+    color: #666666;
+}
+a:active {
+    color: #C5C877;
+}
+h1, h2, h3, h4, h5, h6 { margin: 0 0 .5em; }
+h2{
+    color:#cc6600;
+    font: 140% georgia, times, "times new roman", serif;
+    height: 30px;
+    width: 100%;
+}
+h2 a { text-decoration: none;
+       color: #000000;
+    font-weight: bold;
+}
+h3{
+    color: #333333;
+    font: 110% georgia, times, "times new roman", serif;
+}
+table{
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+    border-top-style: none;
+}
+.tabletd1{
+    color: #000000;
+    text-align: center;
+    background-color: #ffcc66;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.tabletd1 a{
+    color: #000000;
+    text-decoration: none;
+}
+.tabletd2{
+    color: #ffffff;
+    text-align: center;
+    background-color: #cc6600;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.tabletd2 a{
+    color: #000000;
+    text-decoration: none;
+}
+.tabletdtitle{
+    text-align: center;
+    background-color: #666666;
+    color: #ffffff;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>BufferServlet</servlet-name>
+        <servlet-class>theapp5.BufferServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReciveDataServlet</servlet-name>
+        <servlet-class>theapp5.ReciveDataServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InfoServlet</servlet-name>
+        <servlet-class>theapp5.InfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BufferServlet</servlet-name>
+        <url-pattern>/BufferServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReciveDataServlet</servlet-name>
+        <url-pattern>/ReciveDataServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InfoServlet</servlet-name>
+        <url-pattern>/InfoServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

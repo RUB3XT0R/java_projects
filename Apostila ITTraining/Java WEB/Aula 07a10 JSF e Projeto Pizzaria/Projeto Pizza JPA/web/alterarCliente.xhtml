@@ -1,0 +1,28 @@
+    <?xml version='1.0' encoding='ISO-8859-9' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+   <h:head>
+      <title>Pizzaria ITTraining</title>
+   </h:head>
+   <h:body>
+      <img src="LogoItt.jpg"/><br/>
+      <h1>Projeto Pizza</h1>
+      <hr/> 
+      <h:form>
+         <h4>Alterando o Cliente #{clienteBean.cliente.codigo}</h4>
+         <h:panelGrid columns="2">
+            <h:outputText value="Nome"/>
+            <h:inputText value="#{clienteBean.cliente.nome}"/>
+            <h:outputText value="Telefone"/>
+            <h:inputText value="#{clienteBean.cliente.telefone}"/>
+            <h:outputText value="Endereço"/>
+            <h:inputText value="#{clienteBean.cliente.endereco}"/>
+            <h:commandButton action="#{clienteBean.alterar}" value="Alterar"/>
+            <h:commandButton action="clientes" immediate="True" value="Cancelar"/>
+         </h:panelGrid>
+      </h:form>
+      <br/><hr/>ITTraining - Curso Java WEB
+   </h:body>
+</html>
+

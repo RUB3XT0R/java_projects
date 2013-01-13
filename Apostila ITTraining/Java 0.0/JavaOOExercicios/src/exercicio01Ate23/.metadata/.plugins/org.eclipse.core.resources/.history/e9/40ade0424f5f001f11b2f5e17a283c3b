@@ -1,0 +1,5 @@
+package Abst;
+
+public interface HashTable {
+
+}

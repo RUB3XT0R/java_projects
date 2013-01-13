@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+            <table  bgcolor="white">
+               <caption>Cadastro de Novo Cliente</caption>
+               <tr>
+                  <td>CPF/CNPJ:</td>
+                  <td><p:inputMask id="cpfCnpj" mask="999.999.999-99" 
+                                   value="#{clienteBean.cliente.cpfCnpj}" 
+                                   title="CpfCnpj" maxlength="14"/></td>
+                  <td>Nome:</td>
+                  <td><p:inputText id="nome" value="#{clienteBean.cliente.nome}" 
+                                   title="Nome" /></td>
+               </tr>
+               <tr>
+                  <td>E-mail:</td>
+                  <td><p:inputText id="email" value="#{clienteBean.cliente.email}" 
+                                   title="Email" /></td>
+                  <td>Email (2):</td>
+                  <td><p:inputText id="email2" value="#{clienteBean.cliente.email2}" 
+                                   title="Email2" /></td>
+               </tr>
+               <tr>
+                  <td>Tipo:</td>
+                  <td><p:inputText id="tipoCliente" 
+                                   value="#{clienteBean.cliente.tipoCliente}" 
+                                   title="TipoCliente" /></td>
+                  <td>Data de Cadastro:</td>
+                  <td><p:inputText id="dataCadastro" 
+                                   value="#{clienteBean.cliente.dataCadastro}" 
+                                   title="DataCadastro" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                     </p:inputText></td>
+               </tr>
+               <tr>
+                  <td>UF:</td>
+                  <td><p:inputText id="uf" value="#{clienteBean.cliente.uf}" 
+                                   title="Uf" maxlength="2"/></td>
+                  <td>RG:</td>
+                  <td><p:inputMask id="rg" mask="99.999.999-9" 
+                                   value="#{clienteBean.cliente.rg}" 
+                                   title="rg" maxlength="12"/></td>
+               </tr>
+               <tr>
+                  <td>Bairro:</td>
+                  <td><p:inputText id="bairro" value="#{clienteBean.cliente.bairro}" 
+                                   title="Bairro" /></td>
+                  <td>Endereço:</td>
+                  <td><p:inputText id="endereco" value="#{clienteBean.cliente.endereco}" 
+                                   title="Endereco" /></td>
+               </tr>
+               <tr>
+                  <td>Cidade:</td>
+                  <td><p:inputText id="cidade" value="#{clienteBean.cliente.cidade}" 
+                                   title="Cidade"/></td>
+                  <td>CEP:</td>
+                  <td><p:inputMask id="cep" mask="99999-999" 
+                                   value="#{clienteBean.cliente.cep}" 
+                                   title="cep" maxlength="14"/></td>
+               </tr>
+               <tr><th colspan="4"><label>Telefones</label></th></tr>
+               <tr>
+                  <td>Telefone Residencial:</td>
+                  <td><p:inputMask id="telefoneResidencial" mask="(99)9999-9999" 
+                                   value="#{clienteBean.cliente.telefoneResidencial}" 
+                                   title="TelefoneResidencial" maxlength="14"/></td>
+                  <td>Telefone Comercial:</td>
+                  <td><p:inputMask id="telefoneComercial" mask="(99)9999-9999" 
+                                   value="#{clienteBean.cliente.telefoneComercial}" 
+                                   title="telefoneComercial" maxlength="14"/></td>
+               </tr>
+               <tr>
+                  <td>Telefone Celular:</td>
+                  <td><p:inputMask id="telefoneCelular" mask="(99)9999-9999" 
+                                   value="#{clienteBean.cliente.telefoneCelular}" 
+                                   title="telefoneCelular" maxlength="14"/></td>
+               </tr>
+               <tr>
+                  <td colspan="4">
+                     <p align="center">
+                        Alterar <h:commandButton 
+                           action="#{clienteBean.alterar}" image="img/next.png"/>
+                     </p>
+                  </td>                        
+               </tr>
+            </table>
+         </div>
+      </h:form>
+
+   </h:body>
+</html>
+

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Lista de Compras</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h2>Construtor de Listas de Compras</h2>
+            <p:commandButton action="produtos" value="Controle de Produtos" ajax="false"/>
+            <!-- painel comportado lista e carrinho-->
+            <p:panelGrid columns="2">  
+
+                
+                <p:fieldset legend="Produtos Disponíveis"> 
+                    <!-- tabela de produtos-->
+                    <p:dataGrid id="produtosdisponiveisid" paginator="true" rows="3" var="produto" 
+                                value="#{listaProdutosController.listaProdutos}" columns="1">  
+                       <p:column>  
+                            
+                           <p:panel id="itemid" header="#{produto.nome}">  
+                                <h:panelGrid columns="2">   
+                                    <h:outputText style="font-size: 18pt;font-weight: bold;color: darkblue" value="#{produto.descricao}"></h:outputText> <br/>
+                                    <h:outputText style="font-size: 18pt;font-weight: bold;color: darkblue" value="#{produto.preco_maximo_anterior}">  
+                                        <f:convertNumber locale="pt_BR" type="currency"/>  
+                                    </h:outputText>  
+                                     
+                                </h:panelGrid>  
+                            </p:panel>  
+                           
+                           <p:draggable for="itemid" revert="true" handle=".ui-panel-titlebar"/>  
+                        </p:column>  
+                    </p:dataGrid>
+                    
+                    
+                </p:fieldset>
+                
+                
+                
+                
+                <p:fieldset legend="Carrinho">  
+                
+                </p:fieldset>
+                
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

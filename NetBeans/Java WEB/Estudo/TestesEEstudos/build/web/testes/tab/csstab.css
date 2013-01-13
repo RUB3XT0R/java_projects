@@ -1,0 +1,95 @@
+
+body{font-family:arial;font-size:10px;color:#ccc;background-color:#555}
+
+a {
+    color:#ccc;
+    text-decoration:none;
+}
+
+a:hover {
+    color:#ccc;
+    text-decoration:none
+}
+
+#tabMenu {
+    margin:0;
+    padding:0 0 0 15px;
+    list-style:none;
+}
+
+#tabMenu li {
+    float:left;
+    height:32px;
+    width:39px;
+    cursor:pointer;
+    cursor:hand
+}
+
+/* this is the button images */
+li.comments {background:url(tabComment.png) no-repeat 0 -32px;}
+li.posts {background:url(tabStar.png) no-repeat 0 -32px;}
+li.category {background:url(tabFolder.png) no-repeat 0 -32px;}
+li.famous {background:url(tabHeart.png) no-repeat 0 -32px;}
+li.random {background:url(tabRandom.png) no-repeat 0 -32px;}
+
+li.mouseover {background-position:0 0;}
+li.mouseout {background-position:0 -32px;}
+li.selected {background-position:0 0;}
+
+.box {
+    width:227px
+}
+
+.boxTop {
+    background:url(boxTop.gif)no-repeat;
+    height:11px;
+    clear:both
+}
+
+.boxBody {
+    background-color:#282828;
+}
+
+.boxBottom {
+    background:url(boxBottom.gif) no-repeat;
+    height:11px;
+}
+
+.boxBody div {
+    display:none;
+}
+
+.boxBody div.show {
+    display:block;
+}
+
+
+.boxBody #category a {
+    display:block
+}
+
+/* styling for the content*/
+.boxBody div ul {
+    margin:0 10px 0 25px;
+    padding:0;
+    width:190px;
+    list-style-image:url(arrow.gif)
+}
+
+.boxBody div li {
+    border-bottom:1px dotted #8e8e8e;
+    padding:4px 0;
+    cursor:hand;
+    cursor:pointer
+}
+
+.boxBody div ul li.last {
+    border-bottom:none
+}
+
+.boxBody div li span {
+    font-size:8px;
+    font-style:italic;
+    color:#888;
+}
+

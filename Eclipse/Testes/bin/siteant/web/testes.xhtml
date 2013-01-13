@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+
+            <h:commandButton action="index" image="img/prev.gif"/> 
+            <h:commandButton action="newCliente,xhtml" actionListener="#{clienteBean.novo}" image="img/add.png"/>
+
+            <p:dataTable value="#{clienteBean.clientes}" var="item" paginator="true" rows="8"  
+                         selection="#{clienteBean.cliente}" selectionMode="single"  
+                         onRowSelectUpdate="display" onRowSelectComplete="cliDialog.show()" > 
+               <p:column headerText="Id" filterBy="#{item.id}">
+                  <h:outputText value="#{item.id}"/>
+               </p:column>
+               <p:column headerText="Nome" filterBy="#{item.nome}">
+                  <h:outputText value="#{item.nome}"/>
+               </p:column>
+               <p:column headerText="CPF/CNPJ" filterBy="#{item.cpfCnpj}">
+                  <h:outputText value="#{item.cpfCnpj}"/>
+               </p:column>
+               <p:column headerText="DataCadastro" filterBy="#{item.dataCadastro}">
+                  <h:outputText value="#{item.dataCadastro}">
+                     <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                  </h:outputText>
+               </p:column>
+               <p:column headerText="Tel. Resi." filterBy="#{item.telefoneResidencial}">
+                  <h:outputText value="#{item.telefoneResidencial}"/>
+               </p:column>
+               <p:column headerText="Email" filterBy="#{item.email}">
+                  <h:outputText value="#{item.email}"/>
+               </p:column>
+               <p:column headerText="Options" style="width: 50px;">
+                  <h:commandButton action="edit" 
+                                   actionListener="#{clienteBean.selecionar}" image="img/up.gif"/>
+                  <h:commandButton action="del" 
+                                   actionListener="#{clienteBean.selecionar}" image="img/del.png"/>
+               </p:column>  
+            </p:dataTable>
+         </div>
+
+         <p:dialog header="Detalhes do Cliente" widgetVar="cliDialog" resizable="false"  
+                   width="400" >  
+            <h:panelGrid id="display" columns="4" cellpadding="4">  
+               <f:facet name="header">Nome:<h:outputText value="#{clienteBean.cliente.nome}"/></f:facet>  
+               Id:<h:outputText value="#{clienteBean.cliente.id}" />  
+               CPF/CNPJ:<h:outputText value="#{clienteBean.cliente.cpfCnpj}" /> 
+               RG:<h:outputText value="#{clienteBean.cliente.rg}" /> 
+               Tipo:<h:outputText value="#{clienteBean.cliente.tipoCliente}" /> 
+               Data Cadastro:
+               <h:outputText value="#{clienteBean.cliente.dataCadastro}">
+                  <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+               </h:outputText>
+               UF:<h:outputText value="#{clienteBean.cliente.uf}" />
+               Endereço:<h:outputText value="#{clienteBean.cliente.endereco}" />
+               Bairro:<h:outputText value="#{clienteBean.cliente.bairro}" /> 
+               Cidade:<h:outputText value="#{clienteBean.cliente.cidade}" /> 
+               CEP:<h:outputText value="#{clienteBean.cliente.cep}" />   
+               Tel. Residencial:<h:outputText value="#{clienteBean.cliente.telefoneResidencial}" /> 
+               Tel. Celular:<h:outputText value="#{clienteBean.cliente.telefoneCelular}" /> 
+               Tel. Comercial: <h:outputText value="#{clienteBean.cliente.telefoneComercial}" /> 
+               E-mail 1:<h:outputText value="#{clienteBean.cliente.email}" /> 
+               E-mail 2:<h:outputText value="#{clienteBean.cliente.email2}" />
+            </h:panelGrid>  
+         </p:dialog> 
+
+      </h:form>
+   </h:body>
+</html>
+

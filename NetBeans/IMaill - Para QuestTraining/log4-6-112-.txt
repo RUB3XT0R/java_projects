@@ -1,0 +1,126 @@
+Mail to: biasonlucky@mail.com em Thu Jul 19 21:18:10 BRT 2012
+Mail to: biasonlucky@hotmail.com em Thu Jul 19 21:18:45 BRT 2012
+Fail to send: biasonluckyhotmail.com : javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonluckyhotmail.com>: Recipient address rejected: need fully-qualified address
+
+Fail to send: biasonlucky@hotmail.com : javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonluckyhotmail.com>: Recipient address rejected: need fully-qualified address
+
+Fail to send: biasonlucky@hotmail.com : javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonluckyhotmail.com>: Recipient address rejected: need fully-qualified address
+
+Fail to send: biasonlucky@hotmail.com : javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonluckyhotmail.com>: Recipient address rejected: need fully-qualified address
+
+Fail to send: biasonlucky@hotmail : javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonluckyhotmail.com>: Recipient address rejected: need fully-qualified address
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonlucky@hotmail>: Recipient address rejected: need fully-qualified address
+
+Fail to send: biasonlucky@hotmail.com : javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonluckyhotmail.com>: Recipient address rejected: need fully-qualified address
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonlucky@hotmail>: Recipient address rejected: need fully-qualified address
+
+Fail to send: biason@hotmail.com : javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@mail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonluckyhotmail.com>: Recipient address rejected: need fully-qualified address
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonlucky@hotmail>: Recipient address rejected: need fully-qualified address
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biason@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+
+Fail to send: biasonlucky@hotmail.com : javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@mail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonluckyhotmail.com>: Recipient address rejected: need fully-qualified address
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonlucky@hotmail>: Recipient address rejected: need fully-qualified address
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biason@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+
+Fail to send: biasonlucky@hotmail.com : javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@mail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonluckyhotmail.com>: Recipient address rejected: need fully-qualified address
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 504 5.5.2 <biasonlucky@hotmail>: Recipient address rejected: need fully-qualified address
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biason@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 450 4.7.1 <biasonlucky@hotmail.com>: Recipient address rejected: you are sending too many mails, slow down...
+
+-- Término do envio -- Ao todo 11 contatos enviados

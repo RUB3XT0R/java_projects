@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.0"
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+    <navigation-rule>
+        <from-view-id>/cliente.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>novo</from-outcome>
+            <to-view-id>/novoCliente.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/produto.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>novo</from-outcome>
+            <to-view-id>/novoProduto.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>gofor</from-outcome>
+            <to-view-id>/proibido.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>cliente</from-outcome>
+            <to-view-id>/cliente.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>produto</from-outcome>
+            <to-view-id>/produto.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/novoCliente.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>goback</from-outcome>
+            <to-view-id>/cliente.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/novoProduto.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>goback</from-outcome>
+            <to-view-id>/produto.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>reject</from-outcome>
+            <to-view-id>/rejeitado.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>accept</from-outcome>
+            <to-view-id>/aceito.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

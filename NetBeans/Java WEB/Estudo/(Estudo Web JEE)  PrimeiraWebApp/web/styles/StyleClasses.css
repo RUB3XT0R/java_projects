@@ -1,0 +1,23 @@
+/* 
+    Document   : StyleClasses
+    Created on : 18/02/2011, 21:33:00
+    Author     : Lucas Biason
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*-----------------------------------------------------------------------------
+- Estilo de conteúdos da página
+-----------------------------------------------------------------------------*/
+table{
+    border: 0;
+}
+.tabletd1{
+    background-image: url(fundomenunormal.png);
+    color: #000000;
+    text-align: center;
+}
+.tabletd2{
+    background-image: url(fundomenunormalH.png);
+    color: #ffffff;
+    text-align: center;
+}

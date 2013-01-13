@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="testes.xhtml" x="-494" y="495" zoom="true"/>
+        <Node id="maquinas.xhtml" x="-420" y="-16" zoom="true"/>
+        <Node id="editInteressado.xhtml" x="-612" y="-183" zoom="false"/>
+        <Node id="editInstrutor.xhtml" x="79" y="295" zoom="true"/>
+        <Node id="newCliente.xhtml" x="-592" y="95" zoom="true"/>
+        <Node id="delMaquina.xhtml" x="-599" y="24" zoom="true"/>
+        <Node id="resources/ezcomp/menu.xhtml" x="-498" y="526" zoom="true"/>
+        <Node id="newInteressado.xhtml" x="-511" y="-86" zoom="true"/>
+        <Node id="upCursoInte.xhtml" x="-704" y="-126" zoom="true"/>
+        <Node id="clientes.xhtml" x="-348" y="55" zoom="true"/>
+        <Node id="instrutores.xhtml" x="-71" y="193" zoom="true"/>
+        <Node id="delTurma.xhtml" x="310" y="-192" zoom="true"/>
+        <Node id="cursos.xhtml" x="-262" y="194" zoom="true"/>
+        <Node id="editCurso.xhtml" x="-371" y="282" zoom="true"/>
+        <Node id="delCliente.xhtml" x="-328" y="119" zoom="true"/>
+        <Node id="delCurso.xhtml" x="-278" y="328" zoom="true"/>
+        <Node id="addCursoInst.xhtml" x="-70" y="337" zoom="true"/>
+        <Node id="resources/ezcomp/topo.xhtml" x="-496" y="554" zoom="true"/>
+        <Node id="delInstrutor.xhtml" x="148" y="245" zoom="false"/>
+        <Node id="newTurma.xhtml" x="441" y="-154" zoom="true"/>
+        <Node id="addCursoInte.xhtml" x="-703" y="-46" zoom="true"/>
+        <Node id="turmas.xhtml" x="246" y="-113" zoom="true"/>
+        <Node id="delInteressado.xhtml" x="-426" y="-213" zoom="true"/>
+        <Node id="interessados.xhtml" x="-385" y="-147" zoom="true"/>
+        <Node id="index.xhtml" x="51" y="-171" zoom="true"/>
+        <Node id="newInstrutor.xhtml" x="-143" y="260" zoom="true"/>
+        <Node id="newCurso.xhtml" x="-465" y="233" zoom="true"/>
+        <Node id="editCliente.xhtml" x="-533" y="150" zoom="false"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

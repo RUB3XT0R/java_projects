@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+            <h:commandButton action="index" image="img/prev.gif"/> 
+            <h:commandButton action="novo" actionListener="#{interessadoBean.novo}" image="img/add.png"/>
+
+            <p:dataTable id="tbl" value="#{interessadoBean.interessados}" var="item" paginator="true" 
+                         rows="10" selection="#{interessadoBean.interessado}" selectionMode="single">
+               <p:column style="width:16px"><p:rowToggler/></p:column>  
+               <p:column headerText="Id" filterBy="#{item.id}">
+                  <h:outputText value="#{item.id}"/>
+               </p:column>
+               <p:column headerText="Nome" filterBy="#{item.nome}">
+                  <h:outputText value="#{item.nome}"/>
+               </p:column>
+               <p:column headerText="Email" filterBy="#{item.email}">
+                  <h:outputText value="#{item.email}"/>
+               </p:column>
+               <p:column headerText="Celular" filterBy="#{item.celular}">
+                  <h:outputText value="#{item.celular}"/>
+               </p:column>
+               <p:column headerText="Tel. Comercial" filterBy="#{item.telcomercial}">
+                  <h:outputText value="#{item.telcomercial}"/>
+               </p:column>
+               <p:column headerText="Tel. Residencial" filterBy="#{item.telresidencial}">
+                  <h:outputText value="#{item.telresidencial}"/>
+               </p:column>
+               <p:column headerText="Options" style="width: 50px;">
+                  <h:commandButton action="edit" actionListener="#{interessadoBean.selecionar}" 
+                                   image="img/up.gif"/>
+                  <h:commandButton action="del" actionListener="#{interessadoBean.selecionar}" 
+                                   image="img/del.png"/>
+               </p:column>  
+               <p:rowExpansion>  
+                  <h:panelGrid id="display" columns="2" cellpadding="4">  
+                     <f:facet name="header"><h:outputText value="#{item.nome}"/></f:facet>
+                     <h:outputText value="Unidade(s):"/>
+                     <h:panelGrid columns="2" style="border-color: white">
+                        <h:outputText value="ABC" rendered="#{item.unidadeAbc}" id="abc"/>
+                        <h:outputText value="UP" rendered="#{item.unidadeUP}" id="up"/>
+                     </h:panelGrid>
+                     <h:outputText value="Periodo:"/>
+                     <h:outputText value="#{item.periodo}" />
+                     <h:outputText value="Cursos:"/>
+                     <p:dataList value="#{item.cursos}" var="curso">#{curso.nome}</p:dataList>  
+                  </h:panelGrid>    
+               </p:rowExpansion> 
+            </p:dataTable>
+            <p:panel style="width:65px"> 
+               <h:commandLink>  
+                  <p:graphicImage value="images/csv.png" />  
+                  <p:dataExporter type="csv" target="tbl" fileName="interessados" />  
+               </h:commandLink>  
+            </p:panel> 
+         </div>
+      </h:form>
+   </h:body>
+</html>
+

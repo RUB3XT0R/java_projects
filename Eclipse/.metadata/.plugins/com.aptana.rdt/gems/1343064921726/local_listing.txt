@@ -1,0 +1,161 @@
+actionmailer (2.3.4)
+    Author: David Heinemeier Hansson
+    Rubyforge: http://rubyforge.org/projects/actionmailer
+    Homepage: http://www.rubyonrails.org
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    Service layer for easy email delivery and testing.
+
+actionpack (2.3.4)
+    Author: David Heinemeier Hansson
+    Rubyforge: http://rubyforge.org/projects/actionpack
+    Homepage: http://www.rubyonrails.org
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    Web-flow and rendering framework putting the VC in MVC.
+
+activerecord (2.3.4)
+    Author: David Heinemeier Hansson
+    Rubyforge: http://rubyforge.org/projects/activerecord
+    Homepage: http://www.rubyonrails.org
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    Implements the ActiveRecord pattern for ORM.
+
+activeresource (2.3.4)
+    Author: David Heinemeier Hansson
+    Rubyforge: http://rubyforge.org/projects/activeresource
+    Homepage: http://www.rubyonrails.org
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    Think Active Record for web resources.
+
+activesupport (2.3.4)
+    Author: David Heinemeier Hansson
+    Rubyforge: http://rubyforge.org/projects/activesupport
+    Homepage: http://www.rubyonrails.org
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    Support and utility classes used by the Rails framework.
+
+bigdecimal (1.1.0)
+    Author: 
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    This bigdecimal is bundled with Ruby
+
+cgi_multipart_eof_fix (2.5.0)
+    Author: Evan Weaver
+    Rubyforge: http://rubyforge.org/projects/mongrel
+    Homepage:
+    http://blog.evanweaver.com/pages/code#cgi_multipart_eof_fix
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    Fix an exploitable bug in CGI multipart parsing.
+
+fastthread (1.0.1)
+    Platform: i386-mswin32
+    Author: MenTaLguY <mental@rydia.net>
+    Rubyforge: http://rubyforge.org/projects/mongrel
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    Optimized replacement for thread.rb primitives
+
+gem_plugin (0.2.3)
+    Author: Zed A. Shaw
+    Rubyforge: http://rubyforge.org/projects/mongrel
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    A plugin system based on rubygems that uses dependencies only
+
+io-console (0.3)
+    Author: 
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    This io-console is bundled with Ruby
+
+json (1.5.4)
+    Author: 
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    This json is bundled with Ruby
+
+linecache (0.43)
+    Platform: mswin32
+    Author: R. Bernstein
+    Rubyforge: http://rubyforge.org/projects/rocky-hacks
+    Homepage: http://rubyforge.org/projects/rocky-hacks/linecache
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    Read file with caching
+
+minitest (2.5.1)
+    Author: 
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    This minitest is bundled with Ruby
+
+mongrel (1.1.5)
+    Platform: x86-mswin32-60
+    Author: Zed A. Shaw
+    Rubyforge: http://rubyforge.org/projects/mongrel
+    Homepage: http://mongrel.rubyforge.org
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    A small fast HTTP library and server that runs Rails, Camping, Nitro
+    and Iowa apps.
+
+rack (1.0.0)
+    Author: Christian Neukirchen
+    Rubyforge: http://rubyforge.org/projects/rack
+    Homepage: http://rack.rubyforge.org
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    a modular Ruby webserver interface
+
+rails (2.3.4)
+    Author: David Heinemeier Hansson
+    Rubyforge: http://rubyforge.org/projects/rails
+    Homepage: http://www.rubyonrails.org
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    Web-application framework with template engine, control-flow layer,
+    and ORM.
+
+rake (0.9.2.2)
+    Author: 
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    This rake is bundled with Ruby
+
+rdoc (3.9.4)
+    Author: 
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    This rdoc is bundled with Ruby
+
+ruby-debug-base (0.10.3)
+    Platform: mswin32
+    Author: Kent Sibilev
+    Rubyforge: http://rubyforge.org/projects/ruby-debug
+    Homepage: http://rubyforge.org/projects/ruby-debug/
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    Fast Ruby debugger - core component
+
+ruby-debug-ide (0.4.5)
+    Author: Markus Barchfeld, Martin Krauskopf
+    Rubyforge: http://rubyforge.org/projects/debug-commons
+    Homepage: http://rubyforge.org/projects/debug-commons/
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    IDE interface for ruby-debug.
+
+sqlite3-ruby (1.2.1)
+    Platform: mswin32
+    Author: Jamis Buck
+    Homepage: http://sqlite-ruby.rubyforge.org/sqlite3
+    Installed at: C:/Ruby193/lib/ruby/gems/1.9.1
+
+    SQLite3/Ruby is a module to allow Ruby scripts to interface with a
+    SQLite database.

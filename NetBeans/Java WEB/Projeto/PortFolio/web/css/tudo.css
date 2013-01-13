@@ -1,0 +1,86 @@
+
+body{
+    margin: 0 0 0 0;
+    background-color: white;
+}
+#corpo{
+    background-color: white;
+}
+#blocoDestaques{
+    position: absolute;
+    top: 130px;
+}
+
+ul.topnav {
+    list-style: none;
+    padding: 0 20px;
+    margin: 0px 1px 0px 0px;
+    float: left;
+    width: 100%;
+    background: #222;
+    font-size: 1.2em;
+    background: url(../img/topnav_bg.gif) repeat-x;
+    height: 45px;
+}
+ul.topnav li {
+    float: left;
+    margin: 0;
+    padding: 0 15px 0 0;
+    position: relative; /*--Declare X and Y axis base for sub navigation--*/
+}
+ul.topnav li a{
+    padding: 10px 5px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    float: left;
+}
+ul.topnav li a:active{
+    background: url(../img/topnav_hover.gif) center;
+}
+ul.topnav li a:hover{
+    background: url(../img/topnav_hover.gif) center repeat-x;
+    height: 40px;
+}
+ul.topnav li span { /*--Drop down trigger styles--*/
+                    width: 17px;
+                    height: 35px;
+                    float: left;
+                    background: url(../img/subnav_btn.gif) center;
+}
+ul.topnav li span.subhover {
+    background-position: center bottom; cursor: pointer;
+} /*--Hover effect for trigger--*/
+ul.topnav li ul.subnav {
+    list-style: none;
+    position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
+    left: 0; top: 35px;
+    margin: 0; padding: 0;
+    display: none;
+    float: left;
+    width: 170px;
+    height: 20px;
+    border: 1px solid #111;
+    z-index: 0;
+    color: #000000;
+}
+ul.topnav li ul.subnav li{
+    margin: 0; padding: 0;
+    clear: both;
+    width: 170px;
+    z-index: 0;
+    color: #000000;
+}
+html ul.topnav li ul.subnav li a {
+    float: left;
+    width: 145px;
+    background: url(../img/dropdown_linkbg.gif);
+    padding-left: 20px;
+    z-index: 0;
+    color: #000000;
+}
+html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
+                                         background: url(../img/dropdown_linkbg.gif);
+                                         z-index: 0;
+                                         color: #000000;
+}

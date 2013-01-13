@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+   <h:head>
+      <title>Pizzaria ITTraining</title>
+   </h:head>
+   <h:body>
+      <img src="LogoItt.jpg"/><br/>
+      <h1>Projeto Pizza</h1>
+      <hr/>     
+      <h:form>
+         <hr/>
+         <h3>Pedidos a serem entregues:</h3>
+         <h:outputText value="O pedido nº "/>
+         <h:outputText value='#{pedidoBean.pedido.codigo}'/>
+         <h:outputText value=" realmente foi entregue?"/> 
+            <br/>
+            <h:commandButton action="pedidos"  value="Não"/>
+            <h:commandButton action="#{pedidoBean.entregar}" value="Sim"/>
+      </h:form>
+      <br/><hr/>ITTraining - Curso Java WEB
+   </h:body>
+</html>
+

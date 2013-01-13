@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 1 elements(s) to &apos;HashTable/src&apos;&#x0D;&#x0A;- Original project: &apos;Listas&apos;&#x0D;&#x0A;- Destination element: &apos;HashTable/src&apos;&#x0D;&#x0A;- Original element: &apos;Lista.ListaEncadeada.java&apos;" description="Copy compilation unit" destination="=HashTable/src" element1="/src&lt;Lista{ListaEncadeada.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1274381521876" units="1" version="1.0"/>
+</session>

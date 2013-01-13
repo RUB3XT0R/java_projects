@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"  
+      xmlns:f="http://java.sun.com/jsf/core">  
+    <h:head>  
+        <title>Drag and Drop</title>  
+        <link type="text/css" rel="stylesheet" href="./skins/blitzer/skin.css" />  
+    </h:head>  
+    <h:body>  
+        <h:form>  
+            <h:panelGrid columns="2">  
+
+                <p:fieldset legend="Livros Disponíveis">  
+
+                    <p:dataGrid id="livrosdisponiveisid" paginator="true" rows="3" var="livro" value="#{livroController.listaLivros}" columns="1">  
+                        <p:column>  
+                            <p:panel id="itemid" header="#{livro.titulo}">  
+                                <h:panelGrid columns="2">  
+                                    <p:graphicImage url="#{livro.imagem}"/>  
+                                    <h:outputText style="font-size: 18pt;font-weight: bold;color: darkblue" value="#{livro.preco}">  
+                                        <f:convertNumber locale="pt_BR" type="currency"/>  
+                                    </h:outputText>  
+                                </h:panelGrid>  
+                            </p:panel>  
+                            <p:draggable for="itemid" revert="true" handle=".ui-panel-titlebar"/>  
+                        </p:column>  
+                    </p:dataGrid>  
+
+                </p:fieldset>  
+
+                <p:fieldset id="carrinhoid" style="width: 100%" legend="Carrinho de Compras">  
+
+                    <p:outputPanel id="carrinho">  
+                        <h:outputText value="Arraste e solte seus livros Aqui!!!" style="font-size:24px;" />  
+                        <p:dataTable var="livro" value="#{livroController.carrinho}"  
+                                     rendered="#{not empty livroController.carrinho}">  
+                            <p:column headerText="Titulo">  
+                                <h:outputText value="#{livro.titulo}" />  
+                            </p:column>  
+                            <p:column headerText="Autor">  
+                                <h:outputText value="#{livro.autor}" />  
+                            </p:column>  
+                            <p:column headerText="ISBN">  
+                                <h:outputText value="#{livro.isbn}" />  
+                            </p:column>  
+                            <p:column headerText="Nº de Páginas">  
+                                <h:outputText value="#{livro.numeroPaginas}" />  
+                                <f:facet name="footer">  
+                                    <h:outputText value="Total" />  
+                                </f:facet>  
+                            </p:column>  
+                            <p:column headerText="preço">  
+                                <h:outputText value="#{livro.preco}">  
+                                    <f:convertNumber type="currency" locale="pt_BR" />  
+                                </h:outputText>  
+                                <f:facet name="footer">  
+                                    <h:outputText value="#{livroController.valorTotal}">  
+                                        <f:convertNumber type="currency" locale="pt_BR" />  
+                                    </h:outputText>  
+                                </f:facet>  
+                            </p:column>  
+
+                            <p:column style="width:32px">  
+                                <p:commandButton image="ui-icon ui-icon-search" update="carForm:display">  
+                                    <f:setPropertyActionListener value="#{livro}"  
+                                                                 target="#{livroController.livroSelecionado}" />  
+                                </p:commandButton>  
+                            </p:column>  
+                        </p:dataTable>  
+                    </p:outputPanel>  
+
+                </p:fieldset>  
+
+                <p:droppable for="carrinhoid" tolerance="touch"  
+                             activeStyleClass="ui-state-highlight"  
+                             datasource="livrosdisponiveisid"  
+                             dropListener="#{livroController.adicionarLivroNoCarrinho}"  
+                             onDropUpdate="carrinho livrosdisponiveisid"/>  
+            </h:panelGrid>  
+        </h:form>  
+    </h:body>  
+</html>  

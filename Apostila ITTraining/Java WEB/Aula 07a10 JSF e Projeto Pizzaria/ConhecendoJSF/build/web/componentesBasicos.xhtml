@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+   <h:head>
+      <title>Facelet Title</title>
+   </h:head>
+   <h:body>
+      <h:form >
+         <h:outputText value="OI...Eu sou um texto!"/>
+         <br/><br/>
+
+         <h:messages globalOnly="true"
+                     errorStyle="color:red;"
+                     infoStyle="color:green;"/>
+         Idade:<h:inputText value="#{testeBean.idade}"/>
+
+         <br/><br/>
+
+         <h:inputText id="input" required="true"
+                      requiredMessage="Este campo é obrigatório"/>
+         <h:message for="input"
+                    errorStyle="color:red"/>
+         <h:commandButton action="goBack"/>
+
+         <br/><br/>
+         <h:selectBooleanCheckbox value="#{testeBean.confirma}" />
+         <h:outputText value="Deseja receber mais informações desse blog?"/>
+
+         <br/><br/>
+
+         <h:selectOneRadio value="#{testeBean.tipoPessoa}">
+            <f:selectItem itemLabel="Fisica" itemValue="F" />
+            <f:selectItem itemLabel="Juridica" itemValue="J" />
+         </h:selectOneRadio>
+
+         <br/><br/>
+
+         <h:selectOneMenu value="#{testeBean.corSelecionadaOneMenu}" >
+            <f:selectItems value="#{testeBean.cores}" />
+         </h:selectOneMenu>
+
+         <br/><br/>
+
+         <h:selectManyCheckbox value="#{testeBean.coresSelecionadasCheckbox}" layout="pageDirection" >
+            <f:selectItems value="#{testeBean.cores}" />
+         </h:selectManyCheckbox>
+
+         <br/><br/>
+
+         <h:selectManyMenu value="#{testeBean.coresSelecionadasManyMenu}" style="height: 100px"  >
+            <f:selectItems value="#{testeBean.cores}" />
+         </h:selectManyMenu>
+         <br/><br/>
+
+         <h:selectOneRadio
+            value="#{testeBean.carro}">
+            <f:selectItems
+               value="#{testeBean.carros}" />
+         </h:selectOneRadio>
+
+         <br/><br/>
+
+         <h:panelGrid columns="4" footerClass="subtitle" 
+                      headerClass="subtitlebig" styleClass="medium" 
+                      columnClasses="subtitle,medium">
+            <f:facet name="header">
+               <h:outputText value="Table with numbers"/>
+            </f:facet>
+            <h:outputText value="1" />
+            <h:outputText value="2" />
+            <h:outputText value="3" />
+            <h:outputText value="4" />
+            <h:outputText value="5" />
+            <h:outputText value="6" />
+            <h:outputText value="7" />
+            <f:facet name="footer">
+               <h:panelGroup>
+                  <h:outputText value="one row"  />
+                  <h:outputText value=" "  />
+                  <h:outputText
+                     value="grouped with panelGroup" />
+               </h:panelGroup>
+            </f:facet>
+         </h:panelGrid> 
+         <br/><br/>
+
+         <h:dataTable id="books" value="#{testeBean.livros}" var="store">   
+            <h:column>
+               <f:facet name="header">Title</f:facet>
+               <h:outputText value="#{store.titulo}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header">Subject</f:facet>
+               <h:outputText value="#{store.assunto}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header">Preço (R$)</f:facet>
+               <h:outputText value="#{store.preco}"/>
+            </h:column>
+         </h:dataTable> 
+
+         <br/><br/>
+
+         <h:inputText value="#{testeBean.data}"
+                      id="datanascimento"
+                      maxlength="10"
+                      required="true"
+                      converterMessage="Data inválida, formato correto é dd/MM/yyyy">
+            <f:convertDateTime pattern="dd/MM/yyyy"/>
+         </h:inputText>
+
+         <br/><br/>
+         <h:inputText id="input2"
+                      required="true"
+                      validatorMessage="Tamanho mínimo de 2 e máximo de 6">
+            <f:validateLength minimum="2" maximum="6"/>
+         </h:inputText>
+         
+         <br/><br/>
+         <br/><br/>
+         
+                                                        
+                                                
+                                                
+         <br/><br/>
+      </h:form>
+   </h:body>
+</html>
+

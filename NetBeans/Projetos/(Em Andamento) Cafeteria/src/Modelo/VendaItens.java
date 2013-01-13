@@ -1,0 +1,6 @@
+
+package Modelo;
+
+class VendaItens {
+    
+}

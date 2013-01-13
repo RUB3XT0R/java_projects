@@ -1,0 +1,210 @@
+body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color: #9999ff;
+    background-image: url(../img/fundo.png);
+}
+hr{
+    width: 100%;
+}
+#info{
+    position: absolute;
+    left: 290px;
+    top: 400px;
+    width: 700px;
+    height: 190px;
+    text-align: justify;
+    font-size: 18px;
+    color: #000000;
+    padding: 1px;
+}
+#topo{
+    position:absolute;
+    left: 520px;
+    top: 20px;
+    width:192px;
+    height: 82px;
+    text-align: center;
+    color: #ffffff;
+    background-image: url(../img/topofundo.png);
+}
+#formulario{
+    position:absolute;
+    left: 500px;
+    top: 150px;
+    width: 240px;
+    background-image: url(../img/formfundo.png);
+    color: #000000;
+}
+#topo2{
+    position:absolute;
+    left: 358px;
+    top: 40px;
+    width:191px;
+    height: 52px;
+    color: #333333;
+    background-image: url(../img/fundoTopoNaoAtivo.png);
+    text-align: center;
+    vertical-align: middle;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: #7d5d23;
+    border-left-color: #7d5d23;
+    border-bottom-color: #7d5d23;
+    border-top-color: #7d5d23;
+}
+#topo3{
+    position:absolute;
+    left: 550px;
+    top: 40px;
+    width:191px;
+    height: 52px;
+    color: #333333;
+    background-image: url(../img/fundoTopoNaoAtivo.png);
+
+    text-align: center;
+    vertical-align: middle;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: #7d5d23;
+    border-left-color: #7d5d23;
+    border-bottom-color: #7d5d23;
+    border-top-color: #7d5d23;
+}
+#topo4{
+    position:absolute;
+    left: 742px;
+    top: 40px;
+    width:191px;
+    height: 52px;
+    color: #333333;
+    background-image: url(../img/fundoTopoNaoAtivo.png);
+
+    text-align: center;
+    vertical-align: middle;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: #7d5d23;
+    border-left-color: #7d5d23;
+    border-bottom-color: #7d5d23;
+    border-top-color: #7d5d23;
+}
+#topo2Ativo{
+    position:absolute;
+    left: 358px;
+    top: 40px;
+    width:191px;
+    height: 52px;
+    color: #333333;
+    background-image: url(../img/fundoTopoAtivo.png);
+    
+    text-align: center;
+    vertical-align: middle;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: #7d5d23;
+    border-left-color: #7d5d23;
+    border-bottom-color: #7d5d23;
+    border-top-color: #7d5d23;
+    font-weight: bold;
+}
+#topo3Ativo{
+    position:absolute;
+    left: 550px;
+    top: 40px;
+    width:191px;
+    height: 52px;
+    color: #333333;
+    background-image: url(../img/fundoTopoAtivo.png);
+
+    text-align: center;
+    vertical-align: middle;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: #7d5d23;
+    border-left-color: #7d5d23;
+    border-bottom-color: #7d5d23;
+    border-top-color: #7d5d23;
+    font-weight: bold;
+}
+#topo4Ativo{
+    position:absolute;
+    left: 742px;
+    top: 40px;
+    width:191px;
+    height: 52px;
+    color: #333333;
+    background-image: url(../img/fundoTopoAtivo.png);
+    text-align: center;
+    vertical-align: middle;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: #7d5d23;
+    border-left-color: #7d5d23;
+    border-bottom-color: #7d5d23;
+    border-top-color: #7d5d23;
+    font-weight: bold;
+}
+#formulario2{
+    position:absolute;
+    left: 450px;
+    top: 150px;
+    width: 400px;
+    background-image: url(../img/formfundo.png);
+    color: #000000;
+}
+#formulario3{
+    position:absolute;
+    left: 360px;
+    top: 150px;
+    width: 575px;
+    background-image: url(../img/formfundo.png);
+    color: #000000;
+}
+#formulario5{
+    position:absolute;
+    left: 360px;
+    top: 150px;
+    width: 520px;
+    background-image: url(../img/formfundo.png);
+    color: #000000;;
+}
+#formulario, #formulario2, #formulario3, #formulario5
+{
+    padding: 10px;
+}

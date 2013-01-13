@@ -1,0 +1,288 @@
+----Automato original----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q1,q2]
+Σ=[ a,b,c]
+δ = { (q0,a) = {q1,q2} ; (q1,b) = {q1,q2} ; (q2,c) = {q2} ;  }
+F= [ q2]
+-- ----------------------- --
+----Eliminada as transições em vazio----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q1,q2]
+Σ=[ a,b,c]
+δ = { (q0,a) = {q1,q2} ; (q1,b) = {q1,q2} ; (q2,c) = {q2} ;  }
+F= [ q2]
+-- ----------------------- --
+----Eliminados os Não determinismos----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q1,q2,q3,q4,q5,q6]
+Σ=[ a,b,c]
+δ = { (q0,a) = {q3} ; (q1,b) = {q4} ; (q2,c) = {q2} ; (q3,b) = {q5} ; (q3,c) = {q2} ; (q4,b) = {q6} ; (q4,c) = {q2} ; (q5,b) = {q4} ; (q5,c) = {q2} ; (q6,b) = {q4} ; (q6,c) = {q2} ;  }
+F= [ q2,q3,q4,q5,q6]
+-- ----------------------- --
+ - q0 é Acessivel
+ - q3 é Acessivel
+ - q5 é Acessivel
+ - q4 é Acessivel
+ - q6 é Acessivel
+ - q2 é Acessivel
+----Eliminados estados inacessiveis----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q2,q3,q4,q5,q6]
+Σ=[ a,b,c]
+δ = { (q0,a) = {q3} ; (q2,c) = {q2} ; (q3,b) = {q5} ; (q3,c) = {q2} ; (q4,b) = {q6} ; (q4,c) = {q2} ; (q5,b) = {q4} ; (q5,c) = {q2} ; (q6,b) = {q4} ; (q6,c) = {q2} ;  }
+F= [ q2,q3,q4,q5,q6]
+-- ----------------------- --
+ - q2 é útil
+ - q3 é útil
+ - q4 é útil
+ - q5 é útil
+ - q6 é útil
+----Eliminados estados inuteis----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q2,q3,q4,q5,q6]
+Σ=[ a,b,c]
+δ = { (q0,a) = {q3} ; (q2,c) = {q2} ; (q3,b) = {q5} ; (q3,c) = {q2} ; (q4,b) = {q6} ; (q4,c) = {q2} ; (q5,b) = {q4} ; (q5,c) = {q2} ; (q6,b) = {q4} ; (q6,c) = {q2} ;  }
+F= [ q2,q3,q4,q5,q6]
+-- ----------------------- --
+---- Iniciando o algoritmo de Minimização ----
+-- 1ª fase: Classes de equivalencia --
+-- -------------- --
+	q0	q2	q3	q4	q5	
+q2	[X]	[X]	[X]	[X]	[X]	
+q3	[X]	[ ]	[X]	[X]	[X]	
+q4	[X]	[ ]	[ ]	[X]	[X]	
+q5	[X]	[ ]	[ ]	[ ]	[X]	
+q6	[X]	[ ]	[ ]	[ ]	[ ]	
+-- -------------- --
+-- 2ª fase: Análise dos pares --
+-- a) par {q2,q3}
+-- G(q2,c)=q2 e G(q3,c)=q2;
+-- q2=q2:
+-- q2 é equivalente a q3 para c e não deve ser marcado;
+-- -------------- --
+	q0	q2	q3	q4	q5	
+q2	[X]	[X]	[X]	[X]	[X]	
+q3	[X]	[ ]	[X]	[X]	[X]	
+q4	[X]	[ ]	[ ]	[X]	[X]	
+q5	[X]	[ ]	[ ]	[ ]	[X]	
+q6	[X]	[ ]	[ ]	[ ]	[ ]	
+-- -------------- --
+-- a) par {q2,q4}
+-- G(q2,c)=q2 e G(q4,c)=q2;
+-- q2=q2:
+-- q2 é equivalente a q4 para c e não deve ser marcado;
+-- -------------- --
+	q0	q2	q3	q4	q5	
+q2	[X]	[X]	[X]	[X]	[X]	
+q3	[X]	[ ]	[X]	[X]	[X]	
+q4	[X]	[ ]	[ ]	[X]	[X]	
+q5	[X]	[ ]	[ ]	[ ]	[X]	
+q6	[X]	[ ]	[ ]	[ ]	[ ]	
+-- -------------- --
+-- a) par {q2,q5}
+-- G(q2,c)=q2 e G(q5,c)=q2;
+-- q2=q2:
+-- q2 é equivalente a q5 para c e não deve ser marcado;
+-- -------------- --
+	q0	q2	q3	q4	q5	
+q2	[X]	[X]	[X]	[X]	[X]	
+q3	[X]	[ ]	[X]	[X]	[X]	
+q4	[X]	[ ]	[ ]	[X]	[X]	
+q5	[X]	[ ]	[ ]	[ ]	[X]	
+q6	[X]	[ ]	[ ]	[ ]	[ ]	
+-- -------------- --
+-- a) par {q2,q6}
+-- G(q2,c)=q2 e G(q6,c)=q2;
+-- q2=q2:
+-- q2 é equivalente a q6 para c e não deve ser marcado;
+-- -------------- --
+	q0	q2	q3	q4	q5	
+q2	[X]	[X]	[X]	[X]	[X]	
+q3	[X]	[ ]	[X]	[X]	[X]	
+q4	[X]	[ ]	[ ]	[X]	[X]	
+q5	[X]	[ ]	[ ]	[ ]	[X]	
+q6	[X]	[ ]	[ ]	[ ]	[ ]	
+-- -------------- --
+-- a) par {q3,q4}
+-- G(q3,b)=q5 e G(q4,b)=q6;
+-- q5!=q6:
+-- {q5,q6} não está marcado,
+-- {q3,q4} é incluido em uma lista a partir de q5,q6} para posterior analise.
+-- G(q3,c)=q2 e G(q4,c)=q2;
+-- q2=q2:
+-- q3 é equivalente a q4 para c e não deve ser marcado;
+-- -------------- --
+	q0	q2	q3	q4	q5	
+q2	[X]	[X]	[X]	[X]	[X]	
+q3	[X]	[ ]	[X]	[X]	[X]	
+q4	[X]	[ ]	[ ]	[X]	[X]	
+q5	[X]	[ ]	[ ]	[ ]	[X]	
+q6	[X]	[ ]	[ ]	[ ]	[ ]	
+*q5,q6-->[{q4,q3}]
+-- -------------- --
+-- a) par {q3,q5}
+-- G(q3,b)=q5 e G(q5,b)=q4;
+-- q5!=q4:
+-- {q5,q4} não está marcado,
+-- {q3,q5} é incluido em uma lista a partir de q5,q4} para posterior analise.
+-- G(q3,c)=q2 e G(q5,c)=q2;
+-- q2=q2:
+-- q3 é equivalente a q5 para c e não deve ser marcado;
+-- -------------- --
+	q0	q2	q3	q4	q5	
+q2	[X]	[X]	[X]	[X]	[X]	
+q3	[X]	[ ]	[X]	[X]	[X]	
+q4	[X]	[ ]	[ ]	[X]	[X]	
+q5	[X]	[ ]	[ ]	[ ]	[X]	
+q6	[X]	[ ]	[ ]	[ ]	[ ]	
+*q4,q5-->[{q3,q5}]
+*q5,q6-->[{q4,q3}]
+-- -------------- --
+-- a) par {q3,q6}
+-- G(q3,b)=q5 e G(q6,b)=q4;
+-- q5!=q4:
+-- {q5,q4} não está marcado,
+-- {q3,q6} é incluido em uma lista a partir de q5,q4} para posterior analise.
+-- G(q3,c)=q2 e G(q6,c)=q2;
+-- q2=q2:
+-- q3 é equivalente a q6 para c e não deve ser marcado;
+-- -------------- --
+	q0	q2	q3	q4	q5	
+q2	[X]	[X]	[X]	[X]	[X]	
+q3	[X]	[ ]	[X]	[X]	[X]	
+q4	[X]	[ ]	[ ]	[X]	[X]	
+q5	[X]	[ ]	[ ]	[ ]	[X]	
+q6	[X]	[ ]	[ ]	[ ]	[ ]	
+*q4,q5-->[{q3,q5}, {q3,q6}]
+*q5,q6-->[{q4,q3}]
+-- -------------- --
+-- a) par {q4,q5}
+-- G(q4,b)=q6 e G(q5,b)=q4;
+-- q6!=q4:
+-- {q6,q4} não está marcado,
+-- {q4,q5} é incluido em uma lista a partir de q6,q4} para posterior analise.
+-- G(q4,c)=q2 e G(q5,c)=q2;
+-- q2=q2:
+-- q4 é equivalente a q5 para c e não deve ser marcado;
+-- -------------- --
+	q0	q2	q3	q4	q5	
+q2	[X]	[X]	[X]	[X]	[X]	
+q3	[X]	[ ]	[X]	[X]	[X]	
+q4	[X]	[ ]	[ ]	[X]	[X]	
+q5	[X]	[ ]	[ ]	[ ]	[X]	
+q6	[X]	[ ]	[ ]	[ ]	[ ]	
+*q4,q5-->[{q3,q5}, {q3,q6}]
+*q4,q6-->[{q4,q5}]
+*q5,q6-->[{q4,q3}]
+-- -------------- --
+-- a) par {q4,q6}
+-- G(q4,b)=q6 e G(q6,b)=q4;
+-- q6!=q4:
+-- {q6,q4} não está marcado,
+-- {q4,q6} é incluido em uma lista a partir de q6,q4} para posterior analise.
+-- G(q4,c)=q2 e G(q6,c)=q2;
+-- q2=q2:
+-- q4 é equivalente a q6 para c e não deve ser marcado;
+-- -------------- --
+	q0	q2	q3	q4	q5	
+q2	[X]	[X]	[X]	[X]	[X]	
+q3	[X]	[ ]	[X]	[X]	[X]	
+q4	[X]	[ ]	[ ]	[X]	[X]	
+q5	[X]	[ ]	[ ]	[ ]	[X]	
+q6	[X]	[ ]	[ ]	[ ]	[ ]	
+*q4,q5-->[{q3,q5}, {q3,q6}]
+*q4,q6-->[{q4,q5}, {q4,q6}]
+*q5,q6-->[{q4,q3}]
+-- -------------- --
+-- a) par {q5,q6}
+-- G(q5,b)=q4 e G(q6,b)=q4;
+-- q4=q4:
+-- q5 é equivalente a q6 para b e não deve ser marcado;
+-- G(q5,c)=q2 e G(q6,c)=q2;
+-- q2=q2:
+-- q5 é equivalente a q6 para c e não deve ser marcado;
+-- -------------- --
+	q0	q2	q3	q4	q5	
+q2	[X]	[X]	[X]	[X]	[X]	
+q3	[X]	[ ]	[X]	[X]	[X]	
+q4	[X]	[ ]	[ ]	[X]	[X]	
+q5	[X]	[ ]	[ ]	[ ]	[X]	
+q6	[X]	[ ]	[ ]	[ ]	[ ]	
+*q4,q5-->[{q3,q5}, {q3,q6}]
+*q4,q6-->[{q4,q5}, {q4,q6}]
+*q5,q6-->[{q4,q3}]
+-- -------------- --
+-- 3ª fase: Fusão dos equivalentes --
+-- Fundindo o par {q3,q2} no estado q032
+newTransicao(q032,b, q5)
+newTransicao(q032,c, q2)
+-- Fundindo o par {q4,q2} no estado q042
+newTransicao(q042,b, q6)
+newTransicao(q042,c, q032)
+-- Fundindo o par {q4,q3} no estado q043
+newTransicao(q043,b, q6)
+newTransicao(q043,c, q032)
+-- Fundindo o par {q5,q2} no estado q052
+newTransicao(q052,b, q042)
+newTransicao(q052,c, q032)
+-- Fundindo o par {q5,q3} no estado q053
+newTransicao(q053,b, q042)
+newTransicao(q053,c, q032)
+-- Fundindo o par {q5,q4} no estado q054
+newTransicao(q054,b, q042)
+newTransicao(q054,c, q032)
+-- Fundindo o par {q6,q2} no estado q062
+newTransicao(q062,b, q042)
+newTransicao(q062,c, q032)
+-- Fundindo o par {q6,q3} no estado q063
+newTransicao(q063,b, q042)
+newTransicao(q063,c, q032)
+-- Fundindo o par {q6,q4} no estado q064
+newTransicao(q064,b, q042)
+newTransicao(q064,c, q032)
+-- Fundindo o par {q6,q5} no estado q065
+newTransicao(q065,b, q042)
+newTransicao(q065,c, q032)
+----Minimizando ----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q032,q042,q043,q052,q053,q054,q062,q063,q064,q065]
+Σ=[ a,b,c]
+δ = { (q0,a) = {q032} ; (q032,b) = {q052} ; (q032,c) = {q032} ; (q042,b) = {q062} ; (q042,c) = {q032} ; (q043,b) = {q062} ; (q043,c) = {q032} ; (q052,b) = {q042} ; (q052,c) = {q032} ; (q053,b) = {q042} ; (q053,c) = {q032} ; (q054,b) = {q042} ; (q054,c) = {q032} ; (q062,b) = {q042} ; (q062,c) = {q032} ; (q063,b) = {q042} ; (q063,c) = {q032} ; (q064,b) = {q042} ; (q064,c) = {q032} ; (q065,b) = {q042} ; (q065,c) = {q032} ;  }
+F= [ q032,q042,q043,q052,q053,q054,q062,q063,q064,q065]
+-- ----------------------- --
+ - q0 é Acessivel
+ - q032 é Acessivel
+ - q052 é Acessivel
+ - q042 é Acessivel
+ - q062 é Acessivel
+ - q0 é Acessivel
+ - q032 é Acessivel
+ - q052 é Acessivel
+ - q042 é Acessivel
+ - q062 é Acessivel
+----Eliminados estados inacessiveis----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q032,q042,q052,q062]
+Σ=[ a,b,c]
+δ = { (q0,a) = {q032} ; (q032,b) = {q052} ; (q032,c) = {q032} ; (q042,b) = {q062} ; (q042,c) = {q032} ; (q052,b) = {q042} ; (q052,c) = {q032} ; (q062,b) = {q042} ; (q062,c) = {q032} ;  }
+F= [ q032,q042,q052,q062]
+-- ----------------------- --
+-- ----------------------- --
+ - q032 é útil
+ - q042 é útil
+ - q052 é útil
+ - q062 é útil
+----Eliminados estados inuteis----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q032,q042,q052,q062]
+Σ=[ a,b,c]
+δ = { (q0,a) = {q032} ; (q032,b) = {q052} ; (q032,c) = {q032} ; (q042,b) = {q062} ; (q042,c) = {q032} ; (q052,b) = {q042} ; (q052,c) = {q032} ; (q062,b) = {q042} ; (q062,c) = {q032} ;  }
+F= [ q032,q042,q052,q062]
+-- ----------------------- --
+----Automato Minimizado:----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q032,q042,q052,q062]
+Σ=[ a,b,c]
+δ = { (q0,a) = {q032} ; (q032,b) = {q052} ; (q032,c) = {q032} ; (q042,b) = {q062} ; (q042,c) = {q032} ; (q052,b) = {q042} ; (q052,c) = {q032} ; (q062,b) = {q042} ; (q062,c) = {q032} ;  }
+F= [ q032,q042,q052,q062]
+-- ----------------------- --

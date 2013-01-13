@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+   <h:head>
+      <title>Pizzaria ITTraining</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <img src="LogoItt.jpg"/><br/>
+      <h1>Projeto Pizza</h1>
+      <hr/>     
+      <h:form>
+         <p:commandButton action="index" value="Voltar" ajax="false"/>
+         | <p:commandButton action="novoPedido" actionListener="#{pedidoBean.novo}" 
+                            value="Novo" ajax="false"/>
+         <hr/>
+         <h3>Pedidos a serem entregues:</h3>
+         <p:dataTable value="#{pedidoBean.pedidosAEntregar}" var="p">
+            <p:column>
+               <f:facet name="header"><h:outputText value="Codigo"/></f:facet>
+               <h:outputText value="#{p.codigo}"/>
+            </p:column>
+            <p:column>
+               <f:facet name="header"><h:outputText value="Data"/></f:facet>
+               <h:outputText value="#{p.dataPedido}"/>
+            </p:column>
+            <p:column>
+               <f:facet name="header"><h:outputText value="Cliente"/></f:facet>
+               <h:outputText value="#{p.cliente.nome}"/>
+            </p:column>
+            <p:column>
+               <f:facet name="header"><h:outputText value="Tel. cliente"/></f:facet>
+               <h:outputText value="#{p.cliente.telefone}"/>
+            </p:column>
+            <p:column>
+               <f:facet name="header"><h:outputText value="End. cliente"/></f:facet>
+               <h:outputText value="#{p.cliente.endereco}"/>
+            </p:column>
+            <p:column>
+               <f:facet name="header"><h:outputText value="Ações"/></f:facet>
+               <p:commandButton action="removerPedido" 
+                                actionListener="#{pedidoBean.selecionar}" 
+                                value="Cancelar" ajax="false"/>
+               <p:commandButton action="visualizarPedido" 
+                                actionListener="#{pedidoBean.selecionar}" 
+                                value="Detalhes" ajax="false"/>
+               <p:commandButton action="entregaPedido" 
+                                actionListener="#{pedidoBean.selecionar}" 
+                                value="Entregar" ajax="false"/>
+            </p:column>
+         </p:dataTable>
+
+         <h3>Histórico de pedidos:</h3>
+         <p:dataTable value="#{pedidoBean.pedidos}" var="p" paginator="true" rows="4">
+            <p:column>
+               <f:facet name="header"><h:outputText value="Codigo"/></f:facet>
+               <h:outputText value="#{p.codigo}"/>
+            </p:column>
+            <p:column>
+               <f:facet name="header"><h:outputText value="Data"/></f:facet>
+               <h:outputText value="#{p.dataPedido}"/>
+            </p:column>
+            <p:column>
+               <f:facet name="header"><h:outputText value="Cliente"/></f:facet>
+               <h:outputText value="#{p.cliente.nome}"/>
+            </p:column>
+            <p:column>
+               <f:facet name="header"><h:outputText value="Ações"/></f:facet>
+               <p:commandButton action="visualizarPedido" 
+                                actionListener="#{pedidoBean.selecionarHist()}" 
+                                value="Detalhes" ajax="false"/>
+            </p:column>
+         </p:dataTable>
+      </h:form>
+      <br/><hr/>ITTraining - Curso Java WEB
+   </h:body>
+</html>
+

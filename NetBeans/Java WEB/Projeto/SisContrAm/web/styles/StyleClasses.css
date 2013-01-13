@@ -1,0 +1,129 @@
+/* 
+    Document   : StyleClasses
+    Created on : 18/02/2011, 21:33:00
+    Author     : Lucas Biason
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*-----------------------------------------------------------------------------
+- Estilo de conteúdos da página
+-----------------------------------------------------------------------------*/
+.tabletd1{
+    color: #000000;
+    text-align: center;
+    background-color: #ffcc66;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.tabletd1 a{
+    color: #000000;
+    text-decoration: none;
+}
+.tabletd2{
+    color: #ffffff;
+    text-align: center;
+    background-color: #cc6600;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.tabletd2 a{
+    color: #000000;
+    text-decoration: none;
+}
+.tabletd3{
+    color: #000000;
+    text-align: center;
+    background-color: #999999;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.tabletd3 a{
+    color: #000000;
+    text-decoration: none;
+}
+.tabletd4{
+    color: #ffffff;
+    text-align: center;
+    background-color: #333333;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.tabletd4 a{
+    color: #000000;
+    text-decoration: none;
+}
+.tabletdtitle{
+    text-align: center;
+    background-color: #666666;
+    color: #ffffff;
+}
+.tabletdoptions{
+    text-align: center;
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.linkShow{
+    background: url(../img/show.png) no-repeat transparent;
+    height: 25px;
+    width: 25px;
+    border: none;
+    outline-style: none;
+    outline-width: 0;
+}
+.linkDelete{
+    background: url(../img/excluir.png);
+    height: 25px;
+    width: 25px;
+    border: none;
+}
+.linkUpdate{
+    background: url(../img/update.png) ;
+    height: 26px;
+    width: 26px;
+    border: none;
+
+}
+.linkAdd{
+    background: url(../img/add.png);
+    height: 25px;
+    width: 25px;
+    border: none;
+}
+.linkHome1{
+    background-image: url(../img/home1.png);
+    height: 25px;
+    width: 25px;
+    border: none;
+}
+table td{text-align: center; }
+thead th {
+    color: #000000;
+    text-align: center;
+    background-color: #ffcc66;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.odd {
+    color: #ffffff;
+    text-align: center;
+    background-color: #cc6600;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.over {
+    background: #03c;
+    background-color: #ff9933;
+}

@@ -1,0 +1,4 @@
+com.aptana.ide.intro.INTRO_EDITOR_ID=com.aptana.radrails.MyRadRailsEditor
+com.aptana.ide.intro.INTRO_TOOLBAR_IMAGE_LOCATION=http\://www.radrails.org/tools/radrails/images/my_radrails.gif
+com.aptana.ide.intro.IS_PORTAL_SHOWN_PREVIOUSLY=true
+eclipse.preferences.version=1

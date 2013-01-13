@@ -1,0 +1,22 @@
+
+.campoErro{
+    border: 0;
+    color: #ff6600;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    font-weight: bold;
+
+}
+.campo{
+    background-color: white;
+}
+.campoErroActive{
+    background-color: burlywood;
+}
+.trPar{
+    background-color: #ffcc66;
+}
+.trImpar{
+    background-color: #ff9933;
+}

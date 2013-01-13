@@ -1,0 +1,58 @@
+----Automato original----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q3,q4]
+Σ=[ a,b,c,d,e]
+δ = { (q0,a) = {q3} ; (q3,c) = {q4} ; (q4,c) = {q4} ;  }
+F= [ q4]
+----Eliminada as transi__es em vazio----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q3,q4]
+Σ=[ a,b,c,d,e]
+δ = { (q0,a) = {q3} ; (q3,c) = {q4} ; (q4,c) = {q4} ;  }
+F= [ q4]
+----Eliminados os N_o determinismos----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q3,q4]
+Σ=[ a,b,c,d,e]
+δ = { (q0,a) = {q3} ; (q3,c) = {q4} ; (q4,c) = {q4} ;  }
+F= [ q4]
+ - q0 é Acessivel
+ - q3 é Acessivel
+ - q4 é Acessivel
+----Eliminados estados inacessiveis----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q3,q4]
+Σ=[ a,b,c,d,e]
+δ = { (q0,a) = {q3} ; (q3,c) = {q4} ; (q4,c) = {q4} ;  }
+F= [ q4]
+ - q4 é útil
+ - q3 é útil
+----Eliminados estados inuteis----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q3,q4]
+Σ=[ a,b,c,d,e]
+δ = { (q0,a) = {q3} ; (q3,c) = {q4} ; (q4,c) = {q4} ;  }
+F= [ q4]
+----Minimizando ----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q3,q4]
+Σ=[ a,b,c,d,e]
+δ = { (q0,a) = {q3} ; (q3,c) = {q4} ; (q4,c) = {q4} ;  }
+F= [ q4]
+ - q0 é Acessivel
+ - q3 é Acessivel
+ - q4 é Acessivel
+----Eliminados estados inacessiveis----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q3,q4]
+Σ=[ a,b,c,d,e]
+δ = { (q0,a) = {q3} ; (q3,c) = {q4} ; (q4,c) = {q4} ;  }
+F= [ q4]
+ - q4 é útil
+ - q3 é útil
+----Automato Minimizado:----
+M2 = (Q, Σ, δ, q0, F);
+Q=[ q0,q3,q4]
+Σ=[ a,b,c,d,e]
+δ = { (q0,a) = {q3} ; (q3,c) = {q4} ; (q4,c) = {q4} ;  }
+F= [ q4]

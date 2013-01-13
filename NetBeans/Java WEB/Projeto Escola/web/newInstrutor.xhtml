@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+            <table  bgcolor="white">
+               <caption><b>Cadastro de Novo Instrutor</b></caption>
+               <tr>
+                  <td>CPF:</td>
+                  <td><p:inputMask id="cpfCnpj" mask="999.999.999-99" 
+                                   value="#{instrutorBean.instrutor.cpf}" 
+                                   title="CpfCnpj" maxlength="14"/></td>
+                  <td>Nome:</td>
+                  <td><p:inputText id="nome" value="#{instrutorBean.instrutor.nome}" 
+                                   title="Nome" /></td>
+               </tr>
+               <tr>
+                  <td>E-mail:</td>
+                  <td><p:inputText id="email" value="#{instrutorBean.instrutor.email}" 
+                                   title="Email" /></td>
+                  <td>Email (2):</td>
+                  <td><p:inputText id="email2" value="#{instrutorBean.instrutor.email2}" 
+                                   title="Email2" /></td>
+               </tr>
+               <tr>
+                  <td>Telefone:</td>
+                  <td><p:inputText id="telefone" value="#{instrutorBean.instrutor.telefone}" 
+                                   title="telefone" /></td>
+                  <td>Telefone (2):</td>
+                  <td><p:inputText id="telefone2" value="#{instrutorBean.instrutor.telefone2}" 
+                                   title="telefone2" /></td>
+               </tr>
+               <tr>
+                  <td>RG:</td>
+                  <td><p:inputMask id="rg" mask="99.999.999-*" 
+                                   value="#{instrutorBean.instrutor.rg}" 
+                                   title="rg" maxlength="12"/></td>
+               </tr>
+               <tr>
+                  <th colspan="4"><p:separator/></th>
+               </tr>
+               <tr>
+                  <th colspan="4"> Dados do Carro</th>
+               </tr>
+               <tr>
+                  <td>Modelo</td>
+                  <td><p:inputText id="modelo" value="#{instrutorBean.instrutor.carroModelo}" 
+                                   title="modelo"/></td>
+                  <td>Placa:</td>
+                  <td><p:inputMask id="placa" mask="***-9999" 
+                                   value="#{instrutorBean.instrutor.carroPlaca}" 
+                                   title="placa" maxlength="14"/></td>
+               </tr>
+               <tr>
+                  <td>Cor:</td>
+                  <td><p:inputText id="cor" 
+                                   value="#{instrutorBean.instrutor.carroCor}" 
+                                   title="cor"/></td>
+                  <td>Marca:</td>
+                  <td><p:inputText id="marca" 
+                                   value="#{instrutorBean.instrutor.carroMarca}" 
+                                   title="marca"/></td>
+               </tr>
+
+               <tr>
+                  <td colspan="4">
+                     <p align="center">
+                        Cadastrar <h:commandButton 
+                           action="#{instrutorBean.inserir}" image="img/next.png"/>
+                     </p>
+                  </td>                        
+               </tr>
+            </table>
+         </div>
+      </h:form>
+
+   </h:body>
+</html>
+

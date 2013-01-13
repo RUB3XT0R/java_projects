@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='ISO-8859-9' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ezcomp="http://java.sun.com/jsf/composite/ezcomp">
+   <h:head>
+      <title>ITTraining :: Sistema de Controle</title>
+      <link type="text/css" rel="stylesheet" href="jquery-ui-1.8.13.custom.css" />
+   </h:head>
+   <h:body>
+      <h:form>
+         <div id="top"><ezcomp:topo/></div>
+         <div id="left"><ezcomp:menu/></div>
+         <div id="center">
+
+            <h:commandButton action="index" image="img/prev.gif"/> 
+            <h:commandButton action="novo" actionListener="#{turmaBean.novo}" image="img/add.png"/>
+
+            <p:tabView dynamic="true"> 
+               <p:tab title="Turmas Unidade UP">
+                  <p:dataTable value="#{turmaBean.turmasUP}" var="item" selection="#{turmaBean.turma}"
+                               rowStyleClass="#{turmaBean.isCategoria(item.curso.categoria)}"> 
+                     <p:column headerText="Curso"><h:outputText value="#{item.curso.nome}"/></p:column>  
+                     <p:column headerText="Carga Hor."><h:outputText value="#{item.curso.cargaHora}"/></p:column>
+                     <p:column headerText="Sala">
+                        <p:cellEditor>  
+                           <f:facet name="output"><h:outputText value="#{item.sala}"/></f:facet>  
+                           <f:facet name="input"><p:inputText value="#{item.sala}" size="2"/></f:facet>  
+                        </p:cellEditor>  
+                     </p:column>
+                     <p:column headerText="Unid.">
+                        <p:cellEditor>  
+                           <f:facet name="output"><h:outputText value="#{item.unidade}"/></f:facet>  
+                           <f:facet name="input"><p:inputText value="#{item.unidade}" size="7"/></f:facet>  
+                        </p:cellEditor>  
+                     </p:column>
+                     <p:column headerText="Data Início">  
+                        <p:cellEditor>  
+                           <f:facet name="output">
+                              <h:outputText value="#{item.dataInicio}"><f:convertDateTime pattern="MM/dd/yyyy" /></h:outputText>
+                           </f:facet>  
+                           <f:facet name="input"><p:calendar value="#{item.dataInicio}"  size="7" showOn="button"/></f:facet>  
+                        </p:cellEditor>  
+                     </p:column>
+                     <p:column headerText="Data Final">  
+                        <p:cellEditor>  
+                           <f:facet name="output">
+                              <h:outputText value="#{item.dataFim}"><f:convertDateTime pattern="MM/dd/yyyy" /></h:outputText>
+                           </f:facet>  
+                           <f:facet name="input"><p:calendar value="#{item.dataFim}"  size="7" showOn="button"/></f:facet>  
+                        </p:cellEditor>  
+                     </p:column>
+                     <p:column headerText="Duração">  
+                        <p:cellEditor>  
+                           <f:facet name="output"><h:outputText value="#{item.duracao}"/></f:facet>  
+                           <f:facet name="input"><p:inputTextarea value="#{item.duracao}" rows="3" cols="10"/></f:facet>  
+                        </p:cellEditor>  
+                     </p:column> 
+                     <p:column headerText="Investimento">  
+                        <p:cellEditor>  
+                           <f:facet name="output">R$<h:outputText value="#{item.curso.investimento}"/></f:facet>
+                           <f:facet name="input"><p:inputText value="#{item.curso.investimento}" size="4"/></f:facet>  
+                        </p:cellEditor>  
+                     </p:column>
+                     <p:column headerText="A vista">  
+                        <p:cellEditor>  
+                           <f:facet name="output">R$<h:outputText value="#{item.curso.avista}"/></f:facet>  
+                           <f:facet name="input"><p:inputText value="#{item.curso.avista}" size="4"/></f:facet>  
+                        </p:cellEditor>  
+                     </p:column>
+                     <p:column headerText="4x de:">  
+                        R$<h:outputText value="#{item.curso.quatrovezes}"/>
+                     </p:column>
+                     <p:column headerText="10x de:">  
+                        R$<h:outputText value="#{item.curso.dezvezes}"/>
+                     </p:column>
+                     <p:column style="width:30px">  
+                        <p:rowEditor/>  
+                        <h:commandButton action="del" 
+                                         actionListener="#{turmaBean.selecionarUP}" 
+                                   image="img/del.png"/>
+                     </p:column>
+                  </p:dataTable>
+               </p:tab>
+
+               <p:tab title="Turmas Unidade ABC">
+                  <p:dataTable value="#{turmaBean.turmasABC}" var="item" selection="#{turmaBean.turma}"
+                               rowStyleClass="#{turmaBean.isCategoria(item.curso.categoria)}"> 
+                     <p:column headerText="Curso"><h:outputText value="#{item.curso.nome}"/></p:column>  
+                     <p:column headerText="Carga Hor."><h:outputText value="#{item.curso.cargaHora}"/></p:column>
+                     <p:column headerText="Sala"><h:outputText value="#{item.sala}"/></p:column>
+                     <p:column headerText="Data Início">  
+                        <p:cellEditor>  
+                           <f:facet name="output">
+                              <h:outputText value="#{item.dataInicio}"><f:convertDateTime pattern="MM/dd/yyyy" /></h:outputText>
+                           </f:facet>  
+                           <f:facet name="input"><p:calendar value="#{item.dataInicio}"  size="7" showOn="button"/></f:facet>  
+                        </p:cellEditor>  
+                     </p:column>
+                     <p:column headerText="Data Final">  
+                        <p:cellEditor>  
+                           <f:facet name="output">
+                              <h:outputText value="#{item.dataFim}"><f:convertDateTime pattern="MM/dd/yyyy" /></h:outputText>
+                           </f:facet>  
+                           <f:facet name="input"><p:calendar value="#{item.dataFim}"  size="7" showOn="button"/></f:facet>  
+                        </p:cellEditor>  
+                     </p:column>
+                     <p:column headerText="Duração">  
+                        <p:cellEditor>  
+                           <f:facet name="output"><h:outputText value="#{item.duracao}"/></f:facet>  
+                           <f:facet name="input"><p:inputTextarea autoResize="false" value="#{item.duracao}" rows="3" cols="10"/></f:facet>  
+                        </p:cellEditor>  
+                     </p:column> 
+                     <p:column headerText="Investimento">  
+                        <p:cellEditor>  
+                           <f:facet name="output">R$<h:outputText value="#{item.curso.investimento}"/></f:facet>
+                           <f:facet name="input"><p:inputText value="#{item.curso.investimento}" size="4"/></f:facet>  
+                        </p:cellEditor>  
+                     </p:column>
+                     <p:column headerText="A vista">  
+                        <p:cellEditor>  
+                           <f:facet name="output">R$<h:outputText value="#{item.curso.avista}"/></f:facet>  
+                           <f:facet name="input"><p:inputText value="#{item.curso.avista}" size="4"/></f:facet>  
+                        </p:cellEditor>  
+                     </p:column>
+                     <p:column headerText="4x de:">  
+                        R$<h:outputText value="#{item.curso.quatrovezes}"/>
+                     </p:column>
+                     <p:column headerText="10x de:">  
+                        R$<h:outputText value="#{item.curso.dezvezes}"/>
+                     </p:column>
+                     <p:column style="width:30px">  
+                        <p:rowEditor />  
+                        <h:commandButton action="del" 
+                                         actionListener="#{turmaBean.selecionarABC}" 
+                                   image="img/del.png"/>
+                     </p:column>
+                  </p:dataTable>
+               </p:tab>
+            </p:tabView>
+         </div>
+
+      </h:form>
+   </h:body>
+</html>
+

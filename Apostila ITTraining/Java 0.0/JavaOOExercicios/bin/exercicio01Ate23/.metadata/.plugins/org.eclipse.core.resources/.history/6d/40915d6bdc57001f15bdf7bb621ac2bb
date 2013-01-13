@@ -1,0 +1,96 @@
+package Lista;
+
+public class ListaDuplaEncadeada {
+	private Elemento head,tail,atual;
+	private String nameList;
+	private Object removed;
+	public class Elemento{
+		Object data;
+		Elemento next;
+		Elemento prev;
+		public Elemento(Object data,Object next,Object prev){
+			this.data=data;
+			this.next=(Elemento) next;
+			this.prev=(Elemento) prev;
+		}
+	}//fim de Elemento
+	
+	public ListaDuplaEncadeada(String name)	{nameList=name;}
+	public final class EmptyListException extends RuntimeException{
+		public EmptyListException(String n)
+		{super("Não há elementos em "+n);}
+	}
+	//método de limpeza
+	public void clear(){head=tail=null;}
+	//métodos de captura de dados
+	public Elemento getHead() {return head;}
+	public Elemento getTail() {return tail;}
+	public boolean isEmpty() {return head==null;}
+	public String  getName() {return nameList;} 
+	public Object getFirst(){
+		if(head==null) throw new EmptyListException(getName());
+		return head.data;
+	}
+	public Object getLast(){
+		if(tail==null) throw new EmptyListException(getName());
+		return tail.data;
+	}
+	//método de inserção
+	public void insertFront(Object item){
+		atual= new Elemento (item,head,null);
+		if(isEmpty()) tail = atual;
+		if(! isEmpty()) tail.prev= atual;
+		head = atual;
+	}
+	public void insertBack(Object item){
+		atual = new Elemento(item,null,tail);
+		if(isEmpty()) head = atual;
+		else tail.next = atual;
+		tail = atual;
+	};
+	//método de cópia
+	public void assign(ListaEncadeada list){
+		if(list != this){
+			clear();
+			for(atual = list.head; atual!=null; atual=atual.next) insertBack(atual.data);
+		}
+	}
+	//métodos de extração
+	public void extract(Object item){
+		atual = head;
+		while(atual != null && atual.data != item){
+			atual= atual.next;
+		}
+		if(atual==null)throw new IllegalArgumentException("item not found");
+		
+		if(atual==head){
+			head=atual.next;
+			head.prev=null;
+		}
+		else {
+			atual.prev.next =atual.next;
+			atual.next.prev =atual.prev;
+		}
+		if(atual == tail) tail=atual.prev;
+	} 
+	public Object removeFront(){
+		removed = head.data;
+		if(isEmpty()) throw new EmptyListException(getName());
+		if(head==tail) head=tail=null;
+		else head=head.next;
+		head.prev=null;
+		return removed;
+	}
+	public Object removeBack(){
+		removed = tail.data;
+		if(isEmpty()) throw new EmptyListException(getName());
+		if(head==tail) head=tail=null;
+		else {
+			atual = head;
+			while(atual.next != tail) atual = atual.next;
+			tail= atual;
+		}
+		return removed;
+	}
+}
+
